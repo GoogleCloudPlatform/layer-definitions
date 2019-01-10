@@ -1,0 +1,53 @@
+# Copyright 2018 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+revisionsFilePath: "layers/ubuntu1604/java/revisions.bzl"
+
+gcsDeps:
+
+  # OpenJDK installer.
+  - name: "OPENJDK_INSTALLER"
+    bucket: "bazel-mirror"
+    versionRegex: "-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*"
+    fileRegex: "^openjdk/azul-zulu-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*/SHA256SUM$"
+    startsWith: "openjdk/azul-zulu"
+    readShaFromFile: true
+    startIndex: 91
+
+  # OpenJDK source code. (needed for licensing reason)
+  - name: "OPENJDK_SRC"
+    bucket: "bazel-mirror"
+    versionRegex: "-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*"
+    fileRegex: "^openjdk/azul-zulu-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*/SHA256SUM$"
+    startsWith: "openjdk/azul-zulu"
+    readShaFromFile: true
+    startIndex: 0
+
+  # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 Java layer.
+  - name: "DEBS_TARBALL"
+    bucket: "layer-deps"
+    versionRegex: "\\d{8}"
+    fileRegex: "^ubuntu1604/java/debs/\\d{8}_java_debs\\.tar$"
+    startsWith: "ubuntu1604/java/debs/"
+
+  # cacerts.tar file which contains the /etc/ssl/certs/java/cacerts file.
+  # /etc/ssl/certs/java/cacerts is generated when `ca-certificates-java` is installed
+  # or `update-ca-certificates -f` is run. Because of the timestamp embedded, the
+  # file is not deterministic. We commit this file in a GCS bucket and reuse in layer
+  # or container creation so determinism can be achieved.
+  - name: "CACERTS"
+    bucket: "layer-deps"
+    versionRegex: "\\d{8}"
+    fileRegex: "^ubuntu1604/java/cacerts/\\d{8}_cacerts\\.tar$"
+    startsWith: "ubuntu1604/java/cacerts/"
