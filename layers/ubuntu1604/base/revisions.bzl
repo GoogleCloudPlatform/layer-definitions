@@ -18,4 +18,3 @@
 IMAGE = struct(
     sha256 = "sha256:281e570b1c254121ef9db4698554084a809d120aebfe14486c1014d0b6d4d3f5",
 )
-

@@ -34,4 +34,3 @@ CACERTS = struct(
     revision = "20190114",
     sha256 = "5510b55a2d44753dbe7e2da1fb7a513ab31ddc8622bb815789434403f3ec2192",
 )
-

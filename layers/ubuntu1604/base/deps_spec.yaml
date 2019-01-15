@@ -16,8 +16,8 @@ revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
 
 gcrDeps:
 
-  # Google managed base images: marketplace.gcr.io/google/ubuntu16_04:latest.
+  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
   # https://cloud.google.com/container-registry/docs/managed-base-images
   - name: "IMAGE"
-    location: "marketplace.gcr.io/google/ubuntu16_04"
+    location: "l.gcr.io/google/ubuntu16_04"
     tag: "latest"

@@ -24,7 +24,7 @@ def deps():
         container_pull(
             name = "ubuntu1604_python3",
             digest = PY3_IMAGE.sha256,
-            registry = "marketplace.gcr.io",
+            registry = "l.gcr.io",
             repository = "google/python",
         )
 

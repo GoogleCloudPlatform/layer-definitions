@@ -19,4 +19,3 @@ DEBS_TARBALL = struct(
     revision = "20190114",
     sha256 = "6868f3bedbd06a09680a75f90905c303eebfe45e9bb0c4530e2e8320de2279ad",
 )
-

@@ -22,23 +22,23 @@ load(
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "07a81ee03f5feae354c9f98c884e8e886914856fb2b6a63cba4619ef10aaaf0b",
-    strip_prefix = "bazel-toolchains-31b5dc8c4e9c7fd3f5f4d04c6714f2ce87b126c1",
-    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/31b5dc8c4e9c7fd3f5f4d04c6714f2ce87b126c1.tar.gz"],
+    sha256 = "91db7cf3a400da264e9123bb3d070e80184d9e40a87fc38b50e1dbb002b212fc",
+    strip_prefix = "bazel-toolchains-db36179f00b0b252a80824ed7dabc636c5e6c5fe",
+    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/db36179f00b0b252a80824ed7dabc636c5e6c5fe.tar.gz"],
 )
 
 http_archive(
     name = "io_bazel_rules_docker",
-    sha256 = "f3e5c0500533d58be079db1a24ac909f2e0cd98c9d760f5e506e4d05b56c42dd",
-    strip_prefix = "rules_docker-a9bb1dab84cdf46e34d1b34b53a17bda129b5eba",
-    urls = ["https://github.com/bazelbuild/rules_docker/archive/a9bb1dab84cdf46e34d1b34b53a17bda129b5eba.tar.gz"],
+    sha256 = "aed1c249d4ec8f703edddf35cbe9dfaca0b5f5ea6e4cd9e83e99f3b0d1136c3d",
+    strip_prefix = "rules_docker-0.7.0",
+    urls = ["https://github.com/bazelbuild/rules_docker/archive/v0.7.0.tar.gz"],
 )
 
 http_archive(
     name = "base_images_docker",
-    sha256 = "7d34d78c604472c33c4206a59b15cc3fdbc27df90d5bfa983af1844481d4602b",
-    strip_prefix = "base-images-docker-4bb703bcc40dc9ca320ea2fb4c37e0ea31a565d4",
-    urls = ["https://github.com/GoogleCloudPlatform/base-images-docker/archive/4bb703bcc40dc9ca320ea2fb4c37e0ea31a565d4.tar.gz"],
+    sha256 = "ce6043d38aa7fad421910311aecec865beb060eb56d8c3eb5af62b2805e9379c",
+    strip_prefix = "base-images-docker-7657d04ad9e30b9b8d981b96ae57634cd45ba18a",
+    urls = ["https://github.com/GoogleContainerTools/base-images-docker/archive/7657d04ad9e30b9b8d981b96ae57634cd45ba18a.tar.gz"],
 )
 
 http_archive(
@@ -50,7 +50,7 @@ http_archive(
 )
 
 load(
-    "@io_bazel_rules_docker//container:container.bzl",
+    "@io_bazel_rules_docker//repositories:repositories.bzl",
     container_repositories = "repositories",
 )
 

@@ -23,6 +23,6 @@ def deps():
         container_pull(
             name = "ubuntu1604",
             digest = IMAGE.sha256,
-            registry = "marketplace.gcr.io",
+            registry = "l.gcr.io",
             repository = "google/ubuntu16_04",
         )
