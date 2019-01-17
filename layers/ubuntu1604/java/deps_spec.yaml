@@ -16,20 +16,20 @@ revisionsFilePath: "layers/ubuntu1604/java/revisions.bzl"
 
 gcsDeps:
 
-  # OpenJDK installer.
+  # OpenJDK 10 installer.
   - name: "OPENJDK_INSTALLER"
     bucket: "bazel-mirror"
-    versionRegex: "-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*"
-    fileRegex: "^openjdk/azul-zulu-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*/SHA256SUM$"
+    versionRegex: "-?10(\\.\\d+)*(\\+\\d)?-jdk10(\\.\\d+)*"
+    fileRegex: "^openjdk/azul-zulu-?10(\\.\\d+)*(\\+\\d)?-jdk10(\\.\\d+)*/SHA256SUM$"
     startsWith: "openjdk/azul-zulu"
     readShaFromFile: true
     startIndex: 91
 
-  # OpenJDK source code. (needed for licensing reason)
+  # OpenJDK 10 source code. (needed for licensing reason)
   - name: "OPENJDK_SRC"
     bucket: "bazel-mirror"
-    versionRegex: "-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*"
-    fileRegex: "^openjdk/azul-zulu-?\\d+(\\.\\d+)*(\\+\\d)?-jdk\\d+(\\.\\d+)*/SHA256SUM$"
+    versionRegex: "-?10(\\.\\d+)*(\\+\\d)?-jdk10(\\.\\d+)*"
+    fileRegex: "^openjdk/azul-zulu-?10(\\.\\d+)*(\\+\\d)?-jdk10(\\.\\d+)*/SHA256SUM$"
     startsWith: "openjdk/azul-zulu"
     readShaFromFile: true
     startIndex: 0
