@@ -61,6 +61,7 @@ container_repositories()
 # This is NOT needed to use the language_tool_layer target of the gcloud layer.
 http_file(
     name = "gcloud_gpg",
+    downloaded_file_path = "gcloud_gpg",
     sha256 = "226ba1072f20e4ff97ee4f94e87bf45538a900a6d9b25399a7ac3dc5a2f3af87",
     urls = ["https://packages.cloud.google.com/apt/doc/apt-key.gpg"],
 )
@@ -70,6 +71,7 @@ http_file(
 # This is NOT needed to use the language_tool_layer target of the docker layer.
 http_file(
     name = "docker_gpg",
+    downloaded_file_path = "docker_gpg",
     sha256 = "1500c1f56fa9e26b9b8f42452a553675796ade0807cdce11975eb98170b3a570",
     urls = ["https://download.docker.com/linux/ubuntu/gpg"],
 )
