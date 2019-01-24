@@ -16,6 +16,6 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 GO_INSTALLER = struct(
-    revision = "1.11.4",
-    sha256 = "fb26c30e6a04ad937bbc657a1b5bba92f80096af1e8ee6da6430c045a8db3a5b",
+    revision = "1.11.5",
+    sha256 = "ff54aafedff961eb94792487e827515da683d61a5f9482f668008832631e5d25",
 )
