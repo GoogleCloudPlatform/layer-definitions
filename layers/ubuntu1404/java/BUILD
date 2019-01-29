@@ -16,8 +16,9 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
-load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
+load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer", "toolchain_container")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 load("@base_images_docker//package_managers:apt_key.bzl", "add_apt_key")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
@@ -133,4 +134,23 @@ genrule(
         # TODO: remove for future versions of Java that do not need it
         "sed 's|{_JAVA_REVISION_ENCODED}|" + OPENJDK_INSTALLER.revision.replace("+", "%2B") + "|g; s|{_JAVA_REVISION}|" + OPENJDK_INSTALLER.revision + "|g' <$< >$@"
     ),
+)
+
+# This image is for testing purpose only.
+toolchain_container(
+    name = "test_image",
+    base = "@ubuntu1604//image",
+    language_layers = [
+        ":java-ltl",
+        ":java10-ltl",
+    ],
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":test_image",
+    verbose = True,
 )

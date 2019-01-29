@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@base_images_docker//package_managers:apt_key.bzl", "add_apt_key")
@@ -51,4 +52,13 @@ language_tool_layer(
     name = "gcloud-ltl",
     base = "@ubuntu1604//image",
     installables_tar = "@ubuntu1604_gcloud_debs//file",
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":gcloud-ltl",
+    verbose = True,
 )

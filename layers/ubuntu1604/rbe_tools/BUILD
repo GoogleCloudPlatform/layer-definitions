@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
@@ -53,4 +54,13 @@ language_tool_layer(
     name = "rbe-tools-ltl",
     base = "@ubuntu1604//image",
     installables_tar = "@ubuntu1604_rbe_tools_debs//file",
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":rbe-tools-ltl",
+    verbose = True,
 )

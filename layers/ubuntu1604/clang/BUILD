@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
@@ -75,4 +76,13 @@ genrule(
     srcs = ["tests.yaml.tpl"],
     outs = ["tests.yaml"],
     cmd = "sed 's|{_CLANG_REVISION}|" + CLANG_INSTALLER.revision.lstrip("r") + "|' <$< >$@",
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":clang-ltl",
+    verbose = True,
 )

@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
@@ -39,4 +40,13 @@ language_tool_layer(
     name = "gcc-ltl",
     base = "@ubuntu1404//image",
     installables_tar = "@ubuntu1404_gcc_debs//file",
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":gcc-ltl",
+    verbose = True,
 )

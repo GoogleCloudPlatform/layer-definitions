@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer", "toolchain_container")
 load("@base_images_docker//util:run.bzl", "container_run_and_extract")
@@ -90,4 +91,13 @@ genrule(
     srcs = [":tests.yaml.tpl"],
     outs = ["tests.yaml"],
     cmd = "sed 's|{_BAZEL_REVISION}|" + BAZEL_INSTALLER.revision + "|' <$< >$@",
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":bazel-ltl",
+    verbose = True,
 )

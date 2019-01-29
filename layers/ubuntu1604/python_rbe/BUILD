@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
@@ -69,4 +70,13 @@ language_tool_layer(
         "/opt/python3.6/bin/easy_install3": "/opt/python3.6/bin/easy_install-3.6",
     },
     tars = [":python3_tar/python.tar"],
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":python-rbe-ltl",
+    verbose = True,
 )

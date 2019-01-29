@@ -37,3 +37,4 @@ script:
 
   # Make sure all dependencies are properly specified and all targets are buildable.
   - bazel build //layers/$DISTRO/...
+  - bazel test //layers/$DISTRO/... --test_output=errors

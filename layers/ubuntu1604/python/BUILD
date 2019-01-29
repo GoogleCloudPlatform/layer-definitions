@@ -16,6 +16,7 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
@@ -52,4 +53,13 @@ language_tool_layer(
     symlinks = {
         "/usr/bin/python": "/usr/bin/python2.7",
     },
+)
+
+container_test(
+    name = "test",
+    configs = [
+        ":tests.yaml",
+    ],
+    image = ":python-ltl",
+    verbose = True,
 )
