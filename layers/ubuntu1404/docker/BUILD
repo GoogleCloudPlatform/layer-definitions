@@ -56,11 +56,7 @@ download_pkgs(
     ],
     image_tar = ":docker-key-image.tar",
     packages = [
-        "apt-transport-https",
-        "ca-certificates",
-        "curl",
         "docker-ce",
-        "linux-image-extra-virtual",
     ],
 )
 

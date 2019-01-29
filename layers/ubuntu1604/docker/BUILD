@@ -36,6 +36,8 @@ toolchain_container(
     base = "@ubuntu1604//image",
     packages = [
         "apt-transport-https",
+        "ca-certificates",
+        "curl",
     ],
 )
 
@@ -50,15 +52,11 @@ add_apt_key(
 download_pkgs(
     name = "docker_debs",
     additional_repos = [
-        "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable edge",
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable",
     ],
     image_tar = ":docker-key-image.tar",
     packages = [
-        "apt-transport-https",
-        "ca-certificates",
-        "curl",
         "docker-ce",
-        "linux-image-extra-virtual",
     ],
 )
 
