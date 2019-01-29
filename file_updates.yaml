@@ -19,6 +19,8 @@
 #   2. for each one of `extraFiles`, generate a new version of it and archive it
 #      in its GCS bucket.
 
+# ================================= Ubuntu1604 =================================
+
 # Bazel debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/bazel:bazel_debs.tar
@@ -71,3 +73,46 @@
     target: //layers/ubuntu1604/rbe_tools:rbe_tools_debs.tar
     bucket: layer-deps
     dir: ubuntu1604/rbe_tools/debs
+
+# ================================= Ubuntu1404 =================================
+
+# Bazel debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1404/bazel:bazel_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/bazel/debs
+
+# Gcc debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1404/gcc:gcc_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/gcc/debs
+
+# Docker debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1404/docker:docker_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/docker/debs
+
+# Gcloud debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1404/gcloud:gcloud_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/gcloud/debs
+
+# Python debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1404/python:python_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/python/debs
+
+# Java debian package tarball and java cacerts file generated when
+# installing `ca-certificates-java`.
+- triggerFile:
+    target: //layers/ubuntu1404/java:java_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1404/java/debs
+  extraFiles:
+    - target: //layers/ubuntu1404/java:cacerts_tar/cacerts.tar
+      bucket: layer-deps
+      dir: ubuntu1404/java/cacerts

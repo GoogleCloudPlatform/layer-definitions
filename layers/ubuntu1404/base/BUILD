@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
+licenses(["notice"])  # Apache 2.0
 
-gcrDeps:
+package(default_visibility = ["//visibility:public"])
 
-  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
-  # https://cloud.google.com/container-registry/docs/managed-base-images
-  - name: "IMAGE"
-    location: "l.gcr.io/google/ubuntu16_04"
-    tag: "latest"
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+
+exports_files(glob(["*.yaml"]))
+
+bzl_library(
+    name = "lib",
+    srcs = glob(["*.bzl"]),
+)

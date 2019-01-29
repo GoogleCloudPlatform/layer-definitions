@@ -23,6 +23,12 @@ addons:
 install:
   - go get -u github.com/bazelbuild/buildifier/buildifier
 
+# Parallelize tests across virtual machines.
+# https://docs.travis-ci.com/user/speeding-up-the-build/#parallelizing-your-builds-across-virtual-machines
+env:
+  - DISTRO=ubuntu1404
+  - DISTRO=ubuntu1604
+
 script:
   # Check for issues with the format of our bazel config files.
   - buildifier -mode=check $(find . -name BUILD -type f)
@@ -30,4 +36,4 @@ script:
   - buildifier -mode=check $(find . -name '*.bzl' -type f)
 
   # Make sure all dependencies are properly specified and all targets are buildable.
-  - bazel build //...
+  - bazel build //layers/$DISTRO/...

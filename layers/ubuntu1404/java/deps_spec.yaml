@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/java/revisions.bzl"
+revisionsFilePath: "layers/ubuntu1404/java/revisions.bzl"
 
 gcsDeps:
 
@@ -34,12 +34,12 @@ gcsDeps:
     readShaFromFile: true
     startIndex: 0
 
-  # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 Java layer.
+  # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1404 Java layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
     versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1604/java/debs/\\d{8}_java_debs\\.tar$"
-    startsWith: "ubuntu1604/java/debs/"
+    fileRegex: "^ubuntu1404/java/debs/\\d{8}_java_debs\\.tar$"
+    startsWith: "ubuntu1404/java/debs/"
 
   # cacerts.tar file which contains the /etc/ssl/certs/java/cacerts file.
   # /etc/ssl/certs/java/cacerts is generated when `ca-certificates-java` is installed
@@ -49,5 +49,5 @@ gcsDeps:
   - name: "CACERTS"
     bucket: "layer-deps"
     versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1604/java/cacerts/\\d{8}_cacerts\\.tar$"
-    startsWith: "ubuntu1604/java/cacerts/"
+    fileRegex: "^ubuntu1404/java/cacerts/\\d{8}_cacerts\\.tar$"
+    startsWith: "ubuntu1404/java/cacerts/"

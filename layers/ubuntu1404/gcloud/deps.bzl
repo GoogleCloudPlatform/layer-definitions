@@ -12,12 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
+load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
+load(":revisions.bzl", "DEBS_TARBALL")
 
-gcrDeps:
+def deps():
+    """Download dependencies required to use this layer."""
+    excludes = native.existing_rules().keys()
 
-  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
-  # https://cloud.google.com/container-registry/docs/managed-base-images
-  - name: "IMAGE"
-    location: "l.gcr.io/google/ubuntu16_04"
-    tag: "latest"
+    if "ubuntu1404_gcloud_debs" not in excludes:
+        gcs_file(
+            name = "ubuntu1404_gcloud_debs",
+            bucket = "gs://layer-deps/ubuntu1404/gcloud/debs",
+            file = "%s_gcloud_debs.tar" % DEBS_TARBALL.revision,
+            sha256 = DEBS_TARBALL.sha256,
+        )

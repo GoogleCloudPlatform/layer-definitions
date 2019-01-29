@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
+revisionsFilePath: "layers/ubuntu1404/gcc/revisions.bzl"
 
-gcrDeps:
+gcsDeps:
 
-  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
-  # https://cloud.google.com/container-registry/docs/managed-base-images
-  - name: "IMAGE"
-    location: "l.gcr.io/google/ubuntu16_04"
-    tag: "latest"
+  # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1404 Gcc layer.
+  - name: "DEBS_TARBALL"
+    bucket: "layer-deps"
+    versionRegex: "\\d{8}"
+    fileRegex: "^ubuntu1404/gcc/debs/\\d{8}_gcc_debs\\.tar$"
+    startsWith: "ubuntu1404/gcc/debs/"

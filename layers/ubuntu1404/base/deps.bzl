@@ -12,12 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
+load("@io_bazel_rules_docker//container:container.bzl", "container_pull")
+load(":revisions.bzl", "IMAGE")
 
-gcrDeps:
+def deps():
+    """Download dependencies required to use this layer."""
+    excludes = native.existing_rules().keys()
 
-  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
-  # https://cloud.google.com/container-registry/docs/managed-base-images
-  - name: "IMAGE"
-    location: "l.gcr.io/google/ubuntu16_04"
-    tag: "latest"
+    if "ubuntu1404" not in excludes:
+        container_pull(
+            name = "ubuntu1404",
+            digest = IMAGE.sha256,
+            registry = "index.docker.io",
+            repository = "library/ubuntu",
+        )

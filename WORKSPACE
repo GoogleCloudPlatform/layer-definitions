@@ -76,42 +76,83 @@ http_file(
     urls = ["https://download.docker.com/linux/ubuntu/gpg"],
 )
 
-load("//layers/ubuntu1604/base:deps.bzl", base_deps = "deps")
+# Launchpad OpenJDK key used when install java in trusty.
+# This is NOT needed to use the language_tool_layer target of the ubuntu1404 Java layer.
+http_file(
+    name = "launchpad_openjdk_gpg",
+    downloaded_file_path = "launchpad_openjdk_gpg",
+    sha256 = "54b6274820df34a936ccc6f5cb725a9b7bb46075db7faf0ef7e2d86452fa09fd",
+    urls = ["http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xEB9B1D8886F44E2A"],
+)
 
-base_deps()
+# ================================= Ubuntu1604 =================================
 
-load("//layers/ubuntu1604/bazel:deps.bzl", bazel_deps = "deps")
+load("//layers/ubuntu1604/base:deps.bzl", ubuntu1604_base_deps = "deps")
 
-bazel_deps()
+ubuntu1604_base_deps()
 
-load("//layers/ubuntu1604/clang:deps.bzl", clang_deps = "deps")
+load("//layers/ubuntu1604/bazel:deps.bzl", ubuntu1604_bazel_deps = "deps")
 
-clang_deps()
+ubuntu1604_bazel_deps()
 
-load("//layers/ubuntu1604/docker:deps.bzl", docker_deps = "deps")
+load("//layers/ubuntu1604/clang:deps.bzl", ubuntu1604_clang_deps = "deps")
 
-docker_deps()
+ubuntu1604_clang_deps()
 
-load("//layers/ubuntu1604/gcloud:deps.bzl", gcloud_deps = "deps")
+load("//layers/ubuntu1604/docker:deps.bzl", ubuntu1604_docker_deps = "deps")
 
-gcloud_deps()
+ubuntu1604_docker_deps()
 
-load("//layers/ubuntu1604/java:deps.bzl", java_deps = "deps")
+load("//layers/ubuntu1604/gcloud:deps.bzl", ubuntu1604_gcloud_deps = "deps")
 
-java_deps()
+ubuntu1604_gcloud_deps()
 
-load("//layers/ubuntu1604/python:deps.bzl", python_deps = "deps")
+load("//layers/ubuntu1604/java:deps.bzl", ubuntu1604_java_deps = "deps")
 
-python_deps()
+ubuntu1604_java_deps()
 
-load("//layers/ubuntu1604/go:deps.bzl", go_deps = "deps")
+load("//layers/ubuntu1604/python:deps.bzl", ubuntu1604_python_deps = "deps")
 
-go_deps()
+ubuntu1604_python_deps()
 
-load("//layers/ubuntu1604/python_rbe:deps.bzl", python_rbe_deps = "deps")
+load("//layers/ubuntu1604/go:deps.bzl", ubuntu1604_go_deps = "deps")
 
-python_rbe_deps()
+ubuntu1604_go_deps()
 
-load("//layers/ubuntu1604/rbe_tools:deps.bzl", rbe_tools_deps = "deps")
+load("//layers/ubuntu1604/python_rbe:deps.bzl", ubuntu1604_python_rbe_deps = "deps")
 
-rbe_tools_deps()
+ubuntu1604_python_rbe_deps()
+
+load("//layers/ubuntu1604/rbe_tools:deps.bzl", ubuntu1604_rbe_tools_deps = "deps")
+
+ubuntu1604_rbe_tools_deps()
+
+# ================================= Ubuntu1404 =================================
+
+load("//layers/ubuntu1404/base:deps.bzl", ubuntu1404_base_deps = "deps")
+
+ubuntu1404_base_deps()
+
+load("//layers/ubuntu1404/bazel:deps.bzl", ubuntu1404_bazel_deps = "deps")
+
+ubuntu1404_bazel_deps()
+
+load("//layers/ubuntu1404/gcc:deps.bzl", ubuntu1404_gcc_deps = "deps")
+
+ubuntu1404_gcc_deps()
+
+load("//layers/ubuntu1404/docker:deps.bzl", ubuntu1404_docker_deps = "deps")
+
+ubuntu1404_docker_deps()
+
+load("//layers/ubuntu1404/gcloud:deps.bzl", ubuntu1404_gcloud_deps = "deps")
+
+ubuntu1404_gcloud_deps()
+
+load("//layers/ubuntu1404/java:deps.bzl", ubuntu1404_java_deps = "deps")
+
+ubuntu1404_java_deps()
+
+load("//layers/ubuntu1404/python:deps.bzl", ubuntu1404_python_deps = "deps")
+
+ubuntu1404_python_deps()

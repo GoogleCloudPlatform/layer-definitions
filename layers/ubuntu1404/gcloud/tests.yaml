@@ -12,12 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/base/revisions.bzl"
+schemaVersion: "2.0.0"
 
-gcrDeps:
-
-  # Google managed base images: l.gcr.io/google/ubuntu16_04:latest.
-  # https://cloud.google.com/container-registry/docs/managed-base-images
-  - name: "IMAGE"
-    location: "l.gcr.io/google/ubuntu16_04"
-    tag: "latest"
+commandTests:
+- name: 'check-gcloud'
+  command: 'gcloud'
+  args: ['version']
+  expectedOutput: ['Google Cloud SDK.*']
