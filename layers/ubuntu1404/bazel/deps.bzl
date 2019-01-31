@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load(":revisions.bzl", "BAZEL_INSTALLER", "DEBS_TARBALL")
 
 def deps():

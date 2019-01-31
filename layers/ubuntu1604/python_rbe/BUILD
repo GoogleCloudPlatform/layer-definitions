@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
+load("@base_images_docker//util:run.bzl", "container_run_and_extract")
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
+load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
+
 licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
-
-load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
-load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
-load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
-load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
-load("@base_images_docker//util:run.bzl", "container_run_and_extract")
 
 exports_files(glob(["*.yaml"]))
 
@@ -63,11 +63,11 @@ language_tool_layer(
     installables_tar = "@ubuntu1604_python_rbe_debs//file",
     installation_cleanup_commands = PYTHON_CLEANUP_COMMANDS,
     symlinks = {
+        "/opt/python3.6/bin/easy_install3": "/opt/python3.6/bin/easy_install-3.6",
+        "/opt/python3.6/bin/pip3": "/opt/python3.6/bin/pip3.6",
+        "/opt/python3.6/bin/python3": "/opt/python3.6/bin/python3.6",
         "/usr/bin/python": "/usr/bin/python2.7",
         "/usr/bin/python3": "/opt/python3.6/bin/python3.6",
-        "/opt/python3.6/bin/python3": "/opt/python3.6/bin/python3.6",
-        "/opt/python3.6/bin/pip3": "/opt/python3.6/bin/pip3.6",
-        "/opt/python3.6/bin/easy_install3": "/opt/python3.6/bin/easy_install-3.6",
     },
     tars = [":python3_tar/python.tar"],
 )
