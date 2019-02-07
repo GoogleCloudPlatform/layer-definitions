@@ -38,6 +38,7 @@ download_pkgs(
         "binutils",
         "git",
         "patch",
+        "realpath",
         "unzip",
         "wget",
         "zip",
