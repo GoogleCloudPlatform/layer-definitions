@@ -43,6 +43,11 @@ commandTests:
   command: 'wget'
   args: ['--version']
   expectedOutput: ['GNU Wget.* built on linux-gnu.*']
+- name: 'check-realpath'
+  command: 'realpath'
+  args: ['--version']
+  # It outputs to stderr.
+  expectedError: ['realpath version .*']
 
 fileExistenceTests:
 - name: 'bazelrc'
