@@ -20,11 +20,11 @@ commandTests:
   args: ['-version']
   # java outputs to stderr.
   expectedError: ["openjdk version \"1.8.*"]
-- name: 'java10-version'
-  command: '/usr/lib/jvm/zulu{_JAVA_REVISION}-linux_x64-allmodules/bin/java'
+- name: 'java11-version'
+  command: '/usr/lib/jvm/{_JAVA_REVISION}/reduced/bin/java'
   args: ['-version']
   # java outputs to stderr.
-  expectedError: ["openjdk version \"10.*"]
+  expectedError: ["openjdk version \"11.*"]
 - name: 'check-openssl'
   command: 'openssl'
   args: ['version']
@@ -34,11 +34,11 @@ fileExistenceTests:
 - name: 'OpenJDK'
   path: '/usr/lib/jvm/java-8-openjdk-amd64'
   shouldExist: true
-- name: 'OpenJDK 10'
-  path: '/usr/lib/jvm/zulu{_JAVA_REVISION}-linux_x64-allmodules'
+- name: 'OpenJDK 11'
+  path: '/usr/lib/jvm/{_JAVA_REVISION}'
   shouldExist: true
-- name: 'OpenJDK 10 srcs'
-  path: '/usr/src/jdk/zsrc{_JAVA_REVISION_ENCODED}.zip'
+- name: 'OpenJDK 11 srcs'
+  path: '/usr/src/jdk/{_SRC_REVISION}.zip'
   shouldExist: true
 
 metadataTest:

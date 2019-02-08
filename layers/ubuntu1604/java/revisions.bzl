@@ -16,13 +16,13 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 OPENJDK_INSTALLER = struct(
-    revision = "10.2+3-jdk10.0.1",
-    sha256 = "57fad3602e74c79587901d6966d3b54ef32cb811829a2552163185d5064fe9b5",
+    revision = "11.29.3-ca-jdk11.0.2/zulu11.29.3-ca-jdk11.0.2-linux_x64-allmodules-90755145cb6e6418584d8603cd5fa9afbb30aecc-1549209950",
+    sha256 = "460d8a4f0c0204160b48086e341b22943c9cca471b195340e75b38ae9eb33c1c",
 )
 
 OPENJDK_SRC = struct(
-    revision = "10.2+3-jdk10.0.1",
-    sha256 = "0ab6c7a1a8fc32992bcec4d7c77a587c02b8816f67bcb7d16154a60de2dce8a4",
+    revision = "11.29.3-ca-jdk11.0.2/zsrc11.29+3-jdk11.0.2",
+    sha256 = "3b2c249e8995b211bdb165e21c7f068d59c1c3fb64da12d96d6cc600c06595fb",
 )
 
 DEBS_TARBALL = struct(

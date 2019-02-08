@@ -18,7 +18,7 @@ load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer", "toolchain_container")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
-load(":revisions.bzl", "OPENJDK_INSTALLER")
+load(":revisions.bzl", "OPENJDK_INSTALLER", "OPENJDK_SRC")
 
 licenses(["notice"])  # Apache 2.0
 
@@ -86,8 +86,7 @@ language_tool_layer(
 
 pkg_tar(
     name = "open_jdk_tar",
-    package_dir = "/usr/lib/jvm/",
-    strip_prefix = ".",
+    package_dir = "/usr/lib/jvm/" + OPENJDK_INSTALLER.revision.rpartition("/")[0],
     tags = ["manual"],
     deps = [
         "@azul_open_jdk//file",
@@ -104,7 +103,7 @@ pkg_tar(
 )
 
 language_tool_layer(
-    name = "java10-ltl",
+    name = "java11-ltl",
     base = "@ubuntu1604//image",
     tars = [
         ":open_jdk_tar",
@@ -112,15 +111,21 @@ language_tool_layer(
     ],
 )
 
-# Used by tests only.
+# Used by tests only. Replace the placeholders in tests.yaml.tpl with the
+# revisions from revisions.bzl.
+# For example, /usr/lib/jvm/{_JAVA_REVISION} could be replaced with
+# /usr/lib/jvm/11.29.3-ca-jdk11.0.2, and a test will make sure that directory
+# exists in the container.
+# This avoids the need to update the tests.yaml file every time the revision
+# changes.
 genrule(
     name = "generate_java_yaml",
     srcs = ["tests.yaml.tpl"],
     outs = ["tests.yaml"],
     cmd = (
-        # JDK version 10 includes a '+' sign.
-        # TODO: remove for future versions of Java that do not need it
-        "sed 's|{_JAVA_REVISION_ENCODED}|" + OPENJDK_INSTALLER.revision.replace("+", "%2B") + "|g; s|{_JAVA_REVISION}|" + OPENJDK_INSTALLER.revision + "|g' <$< >$@"
+        "sed 's|{_SRC_REVISION}|" + OPENJDK_SRC.revision.rpartition("/")[2] +
+        "|g; s|{_JAVA_REVISION}|" + OPENJDK_INSTALLER.revision.rpartition("/")[0] +
+        "|g' <$< >$@"
     ),
 )
 
@@ -130,7 +135,7 @@ toolchain_container(
     base = "@ubuntu1604//image",
     language_layers = [
         ":java-ltl",
-        ":java10-ltl",
+        ":java11-ltl",
     ],
 )
 

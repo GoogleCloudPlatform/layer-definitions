@@ -28,21 +28,19 @@ def deps():
 
     # ============================ Azul OpenJDK packages ============================
     if "azul_open_jdk" not in excludes:
-        url_revision = OPENJDK_INSTALLER.revision.replace("+", "%2B")
         http_file(
             name = "azul_open_jdk",
-            downloaded_file_path = "zulu" + url_revision + "-linux_x64-allmodules.tar.gz",
+            downloaded_file_path = "zulu-linux.tar.gz",
             sha256 = OPENJDK_INSTALLER.sha256,
-            urls = ["https://mirror.bazel.build/openjdk/azul-zulu" + url_revision + "/zulu" + url_revision + "-linux_x64-allmodules.tar.gz"],
+            urls = ["https://mirror.bazel.build/openjdk/azul-zulu" + OPENJDK_INSTALLER.revision + ".tar.gz"],
         )
 
     if "azul_open_jdk_src" not in excludes:
-        url_revision = OPENJDK_SRC.revision.replace("+", "%2B")
         http_file(
             name = "azul_open_jdk_src",
-            downloaded_file_path = "zsrc" + url_revision + ".zip",
+            downloaded_file_path = OPENJDK_SRC.revision.rpartition("/")[2] + ".zip",
             sha256 = OPENJDK_SRC.sha256,
-            urls = ["https://mirror.bazel.build/openjdk/azul-zulu" + url_revision + "/zsrc" + url_revision + ".zip"],
+            urls = ["https://mirror.bazel.build/openjdk/azul-zulu" + OPENJDK_SRC.revision + ".zip"],
         )
 
     if "ubuntu1604_java_debs" not in excludes:
