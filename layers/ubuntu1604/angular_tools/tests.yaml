@@ -1,0 +1,93 @@
+# Copyright 2018 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: 'check-bzip2'
+  command: 'bzip2'
+  args: ['--version']
+  # bzip2 outputs to stderr.
+  expectedError: ['bzip2, a block-sorting file compressor. .*']
+
+fileExistenceTests:
+- name: 'libasound2_link'
+  path: '/usr/lib/x86_64-linux-gnu/libasound.so.2'
+  shouldExist: true
+- name: 'libasound2'
+  path: '/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0'
+  shouldExist: true
+- name: 'libatk-bridge2.0-0_link'
+  path: '/usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0'
+  shouldExist: true
+- name: 'libatk-bridge2.0-0'
+  path: '/usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0.0.0'
+  shouldExist: true
+- name: 'libatk1.0-0_link'
+  path: '/usr/lib/x86_64-linux-gnu/libatk-1.0.so.0'
+  shouldExist: true
+- name: 'libatk1.0-0'
+  path: '/usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21809.1'
+  shouldExist: true
+- name: 'libdbus-glib-1-2_link'
+  path: '/usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2'
+  shouldExist: true
+- name: 'libdbus-glib-1-2'
+  path: '/usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.3.3'
+  shouldExist: true
+- name: 'libgtk-3-0_link'
+  path: '/usr/lib/x86_64-linux-gnu/libgtk-3.so.0'
+  shouldExist: true
+- name: 'libgtk-3-0'
+  path: '/usr/lib/x86_64-linux-gnu/libgtk-3.so.0.1800.9'
+  shouldExist: true
+- name: 'libnss3'
+  path: '/usr/lib/x86_64-linux-gnu/libnss3.so'
+  shouldExist: true
+- name: 'libpangocairo-1.0-0_link'
+  path: '/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0'
+  shouldExist: true
+- name: 'libpangocairo-1.0-0'
+  path: '/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3800.1'
+  shouldExist: true
+- name: 'libx11-xcb1_link'
+  path: '/usr/lib/x86_64-linux-gnu/libX11-xcb.so.1'
+  shouldExist: true
+- name: 'libx11-xcb1'
+  path: '/usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0'
+  shouldExist: true
+- name: 'libxrandr2_link'
+  path: '/usr/lib/x86_64-linux-gnu/libXrandr.so.2'
+  shouldExist: true
+- name: 'libxrandr2'
+  path: '/usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0'
+  shouldExist: true
+- name: 'libxss1_link'
+  path: '/usr/lib/x86_64-linux-gnu/libXss.so.1'
+  shouldExist: true
+- name: 'libxss1'
+  path: '/usr/lib/x86_64-linux-gnu/libXss.so.1.0.0'
+  shouldExist: true
+- name: 'libxt6_link'
+  path: '/usr/lib/x86_64-linux-gnu/libXt.so.6'
+  shouldExist: true
+- name: 'libxt6'
+  path: '/usr/lib/x86_64-linux-gnu/libXt.so.6.0.0'
+  shouldExist: true
+- name: 'libxtst6_link'
+  path: '/usr/lib/x86_64-linux-gnu/libXtst.so.6'
+  shouldExist: true
+- name: 'libxtst6'
+  path: '/usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0'
+  shouldExist: true

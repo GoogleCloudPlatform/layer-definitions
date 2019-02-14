@@ -127,6 +127,10 @@ load("//layers/ubuntu1604/rbe_tools:deps.bzl", ubuntu1604_rbe_tools_deps = "deps
 
 ubuntu1604_rbe_tools_deps()
 
+load("//layers/ubuntu1604/angular_tools:deps.bzl", ubuntu1604_angular_tools_deps = "deps")
+
+ubuntu1604_angular_tools_deps()
+
 # ================================= Ubuntu1404 =================================
 
 load("//layers/ubuntu1404/base:deps.bzl", ubuntu1404_base_deps = "deps")
