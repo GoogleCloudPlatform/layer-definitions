@@ -12,13 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-revisionsFilePath: "layers/ubuntu1604/angular_tools/revisions.bzl"
+load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
+load(":revisions.bzl", "DEBS_TARBALL")
 
-gcsDeps:
+def deps():
+    """Download dependencies required to use this layer."""
+    excludes = native.existing_rules().keys()
 
-  # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 angular tools layer.
-  - name: "DEBS_TARBALL"
-    bucket: "layer-deps"
-    versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1604/angular_tools/debs/\\d{8}_angular_tools_debs\\.tar$"
-    startsWith: "ubuntu1604/angular_tools/debs/"
+    if "ubuntu1604_webtest_debs" not in excludes:
+        gcs_file(
+            name = "ubuntu1604_webtest_debs",
+            bucket = "gs://layer-deps/ubuntu1604/webtest/debs",
+            file = "%s_webtest_debs.tar" % DEBS_TARBALL.revision,
+            sha256 = DEBS_TARBALL.sha256,
+        )

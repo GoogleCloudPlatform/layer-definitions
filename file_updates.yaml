@@ -74,6 +74,12 @@
     bucket: layer-deps
     dir: ubuntu1604/rbe_tools/debs
 
+# Webtest debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1604/webtest:webtest_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1604/webtest/debs
+
 # ================================= Ubuntu1404 =================================
 
 # Bazel debian package tarball.

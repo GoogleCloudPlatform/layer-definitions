@@ -29,7 +29,7 @@ bzl_library(
 )
 
 download_pkgs(
-    name = "angular_tools_debs",
+    name = "webtest_debs",
     image_tar = "@ubuntu1604//image",
     packages = [
         "bzip2",
@@ -49,9 +49,9 @@ download_pkgs(
 )
 
 language_tool_layer(
-    name = "angular-tools-ltl",
+    name = "webtest-ltl",
     base = "@ubuntu1604//image",
-    installables_tar = "@ubuntu1604_angular_tools_debs//file",
+    installables_tar = "@ubuntu1604_webtest_debs//file",
     installation_cleanup_commands = "rm -rf /var/cache/fontconfig/*",
 )
 
@@ -60,6 +60,6 @@ container_test(
     configs = [
         ":tests.yaml",
     ],
-    image = ":angular-tools-ltl",
+    image = ":webtest-ltl",
     verbose = True,
 )
