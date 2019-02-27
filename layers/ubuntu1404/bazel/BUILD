@@ -36,6 +36,7 @@ download_pkgs(
     packages = [
         "bash-completion",
         "binutils",
+        "file",
         "git",
         "patch",
         "realpath",
