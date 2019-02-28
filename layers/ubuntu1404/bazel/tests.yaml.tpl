@@ -48,6 +48,10 @@ commandTests:
   args: ['--version']
   # It outputs to stderr.
   expectedError: ['realpath version .*']
+- name: 'check-file'
+  command: 'file'
+  args: ['--version']
+  expectedOutput: ['file-*']
 
 fileExistenceTests:
 - name: 'bazelrc'

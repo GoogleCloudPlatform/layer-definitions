@@ -43,6 +43,10 @@ commandTests:
   command: 'wget'
   args: ['--version']
   expectedOutput: ['GNU Wget.* built on linux-gnu.*']
+- name: 'check-file'
+  command: 'file'
+  args: ['--version']
+  expectedOutput: ['file-*']
 
 fileExistenceTests:
 - name: 'bazelrc'
