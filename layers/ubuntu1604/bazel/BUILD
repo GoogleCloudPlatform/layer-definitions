@@ -41,6 +41,7 @@ download_pkgs(
         "patch",
         "unzip",
         "wget",
+        "xz-utils",
         "zip",
     ],
 )

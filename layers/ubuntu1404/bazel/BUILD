@@ -42,6 +42,7 @@ download_pkgs(
         "realpath",
         "unzip",
         "wget",
+        "xz-utils",
         "zip",
     ],
 )
