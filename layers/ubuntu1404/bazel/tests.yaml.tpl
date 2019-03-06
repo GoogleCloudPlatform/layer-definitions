@@ -52,6 +52,10 @@ commandTests:
   command: 'file'
   args: ['--version']
   expectedOutput: ['file-*']
+- name: 'check-xz'
+  command: 'xz'
+  args: ['--version']
+  expectedOutput: ['liblzma *']
 
 fileExistenceTests:
 - name: 'bazelrc'
