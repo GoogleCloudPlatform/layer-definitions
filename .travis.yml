@@ -27,8 +27,22 @@ install:
 # Parallelize tests across virtual machines.
 # https://docs.travis-ci.com/user/speeding-up-the-build/#parallelizing-your-builds-across-virtual-machines
 env:
-  - DISTRO=ubuntu1404
-  - DISTRO=ubuntu1604
+  - LAYER=ubuntu1404/bazel
+  - LAYER=ubuntu1404/docker
+  - LAYER=ubuntu1404/gcc
+  - LAYER=ubuntu1404/gcloud
+  - LAYER=ubuntu1404/java
+  - LAYER=ubuntu1404/python
+  - LAYER=ubuntu1604/bazel
+  - LAYER=ubuntu1604/clang
+  - LAYER=ubuntu1604/docker
+  - LAYER=ubuntu1604/gcloud
+  - LAYER=ubuntu1604/go
+  - LAYER=ubuntu1604/java
+  - LAYER=ubuntu1604/python
+  - LAYER=ubuntu1604/python_rbe
+  - LAYER=ubuntu1604/rbe_tools
+  - LAYER=ubuntu1604/webtest
 
 script:
   - set -e
@@ -38,5 +52,5 @@ script:
   - ./buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name "*.bzl" -type f)
 
   # Make sure all dependencies are properly specified and all targets are buildable.
-  - bazel build //layers/$DISTRO/...
-  - bazel test //layers/$DISTRO/... --test_output=errors
+  - bazel build //layers/$LAYER/...
+  - bazel test //layers/$LAYER/... --test_output=errors
