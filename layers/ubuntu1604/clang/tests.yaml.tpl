@@ -51,9 +51,6 @@ fileExistenceTests:
 - name: 'sanitizer-dfsan'
   path: '/usr/local/lib/clang/9.0.0/include/sanitizer/dfsan_interface.h'
   shouldExist: true
-- name: 'sanitizer-esan'
-  path: '/usr/local/lib/clang/9.0.0/include/sanitizer/esan_interface.h'
-  shouldExist: true
 - name: 'sanitizer-linux_syscall_hooks'
   path: '/usr/local/lib/clang/9.0.0/include/sanitizer/linux_syscall_hooks.h'
   shouldExist: true
