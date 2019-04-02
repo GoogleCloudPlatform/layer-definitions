@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load(
     ":revisions.bzl",
@@ -44,17 +43,21 @@ def deps():
         )
 
     if "ubuntu1404_java_debs" not in excludes:
-        gcs_file(
+        http_file(
             name = "ubuntu1404_java_debs",
-            bucket = "gs://layer-deps/ubuntu1404/java/debs",
-            file = "%s_java_debs.tar" % DEBS_TARBALL.revision,
+            downloaded_file_path = DEBS_TARBALL.revision + "_java_debs.tar",
             sha256 = DEBS_TARBALL.sha256,
+            urls = [
+                "https://storage.googleapis.com/layer-deps/ubuntu1404/java/debs/" + DEBS_TARBALL.revision + "_java_debs.tar",
+            ],
         )
 
     if "ubuntu1404_java_cacerts" not in excludes:
-        gcs_file(
+        http_file(
             name = "ubuntu1404_java_cacerts",
-            bucket = "gs://layer-deps/ubuntu1404/java/cacerts",
-            file = "%s_cacerts.tar" % CACERTS.revision,
+            downloaded_file_path = CACERTS.revision + "_cacerts.tar",
             sha256 = CACERTS.sha256,
+            urls = [
+                "https://storage.googleapis.com/layer-deps/ubuntu1404/java/cacerts/" + CACERTS.revision + "_cacerts.tar",
+            ],
         )

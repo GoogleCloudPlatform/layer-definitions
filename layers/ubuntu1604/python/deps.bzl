@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load(":revisions.bzl", "DEBS_TARBALL")
 
 def deps():
@@ -20,9 +20,11 @@ def deps():
     excludes = native.existing_rules().keys()
 
     if "ubuntu1604_python_debs" not in excludes:
-        gcs_file(
+        http_file(
             name = "ubuntu1604_python_debs",
-            bucket = "gs://layer-deps/ubuntu1604/python/debs",
-            file = "%s_python_debs.tar" % DEBS_TARBALL.revision,
+            downloaded_file_path = DEBS_TARBALL.revision + "_python_debs.tar",
             sha256 = DEBS_TARBALL.sha256,
+            urls = [
+                "https://storage.googleapis.com/layer-deps/ubuntu1604/python/debs/" + DEBS_TARBALL.revision + "_python_debs.tar",
+            ],
         )

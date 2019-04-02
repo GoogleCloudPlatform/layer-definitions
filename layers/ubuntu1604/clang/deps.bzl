@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@bazel_toolchains//rules:gcs.bzl", "gcs_file")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load(
     ":revisions.bzl",
@@ -44,9 +43,11 @@ def deps():
         )
 
     if "ubuntu1604_clang_debs" not in excludes:
-        gcs_file(
+        http_file(
             name = "ubuntu1604_clang_debs",
-            bucket = "gs://layer-deps/ubuntu1604/clang/debs",
-            file = "%s_clang_debs.tar" % DEBS_TARBALL.revision,
+            downloaded_file_path = DEBS_TARBALL.revision + "_clang_debs.tar",
             sha256 = DEBS_TARBALL.sha256,
+            urls = [
+                "https://storage.googleapis.com/layer-deps/ubuntu1604/clang/debs/" + DEBS_TARBALL.revision + "_clang_debs.tar",
+            ],
         )
