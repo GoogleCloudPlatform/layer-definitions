@@ -28,6 +28,6 @@ gcsDeps:
   # The Debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 Bazel layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1604/bazel/debs/\\d{8}_bazel_debs\\.tar$"
+    versionRegex: "\\d{8}(\\d{6})?"
+    fileRegex: "^ubuntu1604/bazel/debs/\\d{8}(\\d{6})?_bazel_debs\\.tar$"
     startsWith: "ubuntu1604/bazel/debs/"

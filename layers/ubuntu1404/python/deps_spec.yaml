@@ -19,6 +19,6 @@ gcsDeps:
   # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1404 Python layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1404/python/debs/\\d{8}_python_debs\\.tar$"
+    versionRegex: "\\d{8}(\\d{6})?"
+    fileRegex: "^ubuntu1404/python/debs/\\d{8}(\\d{6})?_python_debs\\.tar$"
     startsWith: "ubuntu1404/python/debs/"

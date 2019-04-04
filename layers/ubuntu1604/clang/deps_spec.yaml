@@ -33,6 +33,6 @@ gcsDeps:
   # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 Clang layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}"
-    fileRegex: "^ubuntu1604/clang/debs/\\d{8}_clang_debs\\.tar$"
+    versionRegex: "\\d{8}(\\d{6})?"
+    fileRegex: "^ubuntu1604/clang/debs/\\d{8}(\\d{6})?_clang_debs\\.tar$"
     startsWith: "ubuntu1604/clang/debs/"
