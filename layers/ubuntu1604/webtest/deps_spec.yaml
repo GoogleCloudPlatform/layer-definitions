@@ -19,6 +19,6 @@ gcsDeps:
   # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 webtest layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}(\\d{6})?"
-    fileRegex: "^ubuntu1604/webtest/debs/\\d{8}(\\d{6})?webtest\\.tar$"
+    versionRegex: "\\d{8,}"
+    fileRegex: "^ubuntu1604/webtest/debs/\\d{8,}webtest\\.tar$"
     startsWith: "ubuntu1604/webtest/debs/"

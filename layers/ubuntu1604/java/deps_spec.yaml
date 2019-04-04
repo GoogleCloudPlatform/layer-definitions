@@ -33,8 +33,8 @@ gcsDeps:
   # The debian packages tarball pulled from the GCS bucket required for the Ubuntu1604 Java layer.
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}(\\d{6})?"
-    fileRegex: "^ubuntu1604/java/debs/\\d{8}(\\d{6})?_java_debs\\.tar$"
+    versionRegex: "\\d{8,}"
+    fileRegex: "^ubuntu1604/java/debs/\\d{8,}_java_debs\\.tar$"
     startsWith: "ubuntu1604/java/debs/"
 
   # cacerts.tar file which contains the /etc/ssl/certs/java/cacerts file.
@@ -44,6 +44,6 @@ gcsDeps:
   # or container creation so determinism can be achieved.
   - name: "CACERTS"
     bucket: "layer-deps"
-    versionRegex: "\\d{8}(\\d{6})?"
-    fileRegex: "^ubuntu1604/java/cacerts/\\d{8}(\\d{6})?_cacerts\\.tar$"
+    versionRegex: "\\d{8,}"
+    fileRegex: "^ubuntu1604/java/cacerts/\\d{8,}_cacerts\\.tar$"
     startsWith: "ubuntu1604/java/cacerts/"
