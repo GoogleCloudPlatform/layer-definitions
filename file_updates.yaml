@@ -80,6 +80,12 @@
     bucket: layer-deps
     dir: ubuntu1604/webtest/debs
 
+# Android test debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1604/android_test:android_test_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1604/android_test/debs
+
 # ================================= Ubuntu1404 =================================
 
 # Bazel debian package tarball.
