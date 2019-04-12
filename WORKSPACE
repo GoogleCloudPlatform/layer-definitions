@@ -131,6 +131,10 @@ load("//layers/ubuntu1604/webtest:deps.bzl", ubuntu1604_webtest_deps = "deps")
 
 ubuntu1604_webtest_deps()
 
+load("//layers/ubuntu1604/android_test:deps.bzl", ubuntu1604_android_test_deps = "deps")
+
+ubuntu1604_android_test_deps()
+
 # ================================= Ubuntu1404 =================================
 
 load("//layers/ubuntu1404/base:deps.bzl", ubuntu1404_base_deps = "deps")

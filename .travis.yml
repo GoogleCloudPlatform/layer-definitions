@@ -33,6 +33,7 @@ env:
   - LAYER=ubuntu1404/gcloud
   - LAYER=ubuntu1404/java
   - LAYER=ubuntu1404/python
+  - LAYER=ubuntu1604/android_test
   - LAYER=ubuntu1604/bazel
   - LAYER=ubuntu1604/clang
   - LAYER=ubuntu1604/docker

@@ -1,0 +1,59 @@
+# Copyright 2018 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: 'foreign_arch'
+  command: 'dpkg'
+  args: ['--print-foreign-architectures']
+  expectedOutput: ['i386']
+- name: 'cpio_test'
+  command: 'cpio'
+  args: ['--version']
+  expectedOutput: ['cpio \(GNU cpio\) \d+.*']
+- name: 'lsof_test'
+  command: 'lsof'
+  args: ['-v']
+  expectedError: ['lsof version information:.*']
+- name: 'xvfb_test'
+  command: 'Xvfb'
+  args: ['-help']
+  expectedError: ['use: X \[:<display>\] \[option\].*']
+
+fileExistenceTests:
+- name: 'libpulse-dev_header'
+  path: '/usr/include/pulse/mainloop.h'
+  shouldExist: true
+- name: 'libpulse-dev_cmake'
+  path: '/usr/lib/x86_64-linux-gnu/cmake/PulseAudio/PulseAudioConfig.cmake'
+  shouldExist: true
+- name: 'libpulse-dev_so'
+  path: '/usr/lib/x86_64-linux-gnu/libpulse.so'
+  shouldExist: true
+- name: 'libpulse-dev_pc'
+  path: '/usr/lib/x86_64-linux-gnu/pkgconfig/libpulse.pc'
+  shouldExist: true
+- name: 'libstdc++6:i386_link'
+  path: '/usr/lib/i386-linux-gnu/libstdc++.so.6'
+  shouldExist: true
+- name: 'libstdc++6:i386'
+  path: '/usr/lib/i386-linux-gnu/libstdc++.so.6.0.21'
+  shouldExist: true
+- name: 'zlib1g:i386_link'
+  path: '/lib/i386-linux-gnu/libz.so.1'
+  shouldExist: true
+- name: 'zlib1g:i386'
+  path: '/lib/i386-linux-gnu/libz.so.1.2.8'
+  shouldExist: true
