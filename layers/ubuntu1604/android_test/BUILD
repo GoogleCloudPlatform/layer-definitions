@@ -13,6 +13,7 @@
 # limitations under the License.
 
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
 licenses(["notice"])  # Apache 2.0
 
