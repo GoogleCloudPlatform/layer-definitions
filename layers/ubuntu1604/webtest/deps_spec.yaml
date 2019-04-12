@@ -20,5 +20,5 @@ gcsDeps:
   - name: "DEBS_TARBALL"
     bucket: "layer-deps"
     versionRegex: "\\d{8,}"
-    fileRegex: "^ubuntu1604/webtest/debs/\\d{8,}webtest\\.tar$"
+    fileRegex: "^ubuntu1604/webtest/debs/\\d{8,}_webtest_debs\\.tar$"
     startsWith: "ubuntu1604/webtest/debs/"
