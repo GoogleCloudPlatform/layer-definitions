@@ -22,9 +22,9 @@ load(
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "91db7cf3a400da264e9123bb3d070e80184d9e40a87fc38b50e1dbb002b212fc",
-    strip_prefix = "bazel-toolchains-db36179f00b0b252a80824ed7dabc636c5e6c5fe",
-    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/db36179f00b0b252a80824ed7dabc636c5e6c5fe.tar.gz"],
+    sha256 = "bcaa7239f4692054a7abcbcdb1f296f200cbe8a6c8c37bde485b3f3a0929a3c8",
+    strip_prefix = "bazel-toolchains-c6c7c4e850d9668d81aca2c7193b739755aa2fb5",
+    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/c6c7c4e850d9668d81aca2c7193b739755aa2fb5.tar.gz"],
 )
 
 http_archive(
@@ -83,6 +83,23 @@ http_file(
     downloaded_file_path = "launchpad_openjdk_gpg",
     sha256 = "54b6274820df34a936ccc6f5cb725a9b7bb46075db7faf0ef7e2d86452fa09fd",
     urls = ["http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xEB9B1D8886F44E2A"],
+)
+
+# These are used by CI only.
+load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
+load("@bazel_toolchains//rules:environments.bzl", "clang_env")
+
+rbe_autoconfig(
+    name = "rbe_toolchain_config",
+    base_container_digest = "sha256:fbd499b53a377fe2c6c5e65c33bdecd9393871e19a64eaf785fb6491f31849d3",
+    # Note that if you change the `digest`, you might also need to update the
+    # `base_container_digest` to make sure asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud:<digest>
+    # and marketplace.gcr.io/google/rbe-ubuntu16-04:<base_container_digest> have the
+    # same Clang and JDK installed.
+    digest = "sha256:6e35c476559829b59530be8e984932279c177d91984455557bf1b66315cd7c7b",
+    env = clang_env(),
+    registry = "gcr.io",
+    repository = "asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud",
 )
 
 # ================================= Ubuntu1604 =================================
