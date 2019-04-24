@@ -17,6 +17,37 @@ options:
     machineType: "N1_HIGHCPU_32"
 
 steps:
+  # Install buildifier
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
+    entrypoint: "wget"
+    args:
+    - "-q"
+    - "https://github.com/bazelbuild/buildtools/releases/download/0.20.0/buildifier"
+
+  # Make the downloaded buildifier executable.
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
+    entrypoint: "chmod"
+    args:
+    - "+x"
+    - "buildifier"
+    id: "buildifier-enable"
+
+  # Run buildifier --mode=check.
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
+    entrypoint: "bash"
+    args:
+    - "-c"
+    - "/workspace/buildifier --mode=check  $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
+    waitFor: ["buildifier-enable"]
+
+  # Run buildifier --lint=warn.
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
+    entrypoint: "bash"
+    args:
+    - "-c"
+    - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
+    waitFor: ["buildifier-enable"]
+
   - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "bazel"
     args:
@@ -46,38 +77,3 @@ steps:
     - "--test_output=errors"
     - "--loading_phase_threads=1"
     - "//layers/..."
-    waitFor: ["-"]
-
-  # Install buildifier
-  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
-    entrypoint: "wget"
-    args:
-    - "-q"
-    - "https://github.com/bazelbuild/buildtools/releases/download/0.20.0/buildifier"
-    id: "buildifier-install"
-    waitFor: ["-"]
-
-  # Make the downloaded buildifier executable.
-  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
-    entrypoint: "chmod"
-    args:
-    - "+x"
-    - "buildifier"
-    id: "buildifier-enable"
-    waitFor: ["buildifier-install"]
-
-  # Run buildifier --mode=check.
-  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
-    entrypoint: "bash"
-    args:
-    - "-c"
-    - "/workspace/buildifier --mode=check  $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
-    waitFor: ["buildifier-enable"]
-
-  # Run buildifier --lint=warn.
-  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
-    entrypoint: "bash"
-    args:
-    - "-c"
-    - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
-    waitFor: ["buildifier-enable"]
