@@ -77,7 +77,9 @@ JAVA_CLEANUP_COMMANDS = (
     # `ca-certificates-java` is installed.
     "/etc/ssl/certs/java/cacerts " +
     "/tmp/hsperfdata_root/* " +
-    "/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/classes.jsa"
+    "/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/classes.jsa " +
+    # A dangling symlink created by installing `openjdk-8-jdk-headless`.
+    "/usr/lib/jvm/java-8-openjdk-amd64/src.zip"
 )
 
 language_tool_layer(
