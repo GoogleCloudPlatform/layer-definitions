@@ -21,8 +21,8 @@ OPENJDK_INSTALLER = struct(
 )
 
 OPENJDK_SRC = struct(
-    revision = "11.29.3-ca-jdk11.0.2/zsrc11.29+3-jdk11.0.2",
-    sha256 = "3b2c249e8995b211bdb165e21c7f068d59c1c3fb64da12d96d6cc600c06595fb",
+    revision = "11.31.11-ca-jdk11.0.3/zsrc11.31.11-jdk11.0.3",
+    sha256 = "65afc25dd914a094e25b1f804160bb20849f923d9a4b7d989f885558922e8182",
 )
 
 DEBS_TARBALL = struct(
