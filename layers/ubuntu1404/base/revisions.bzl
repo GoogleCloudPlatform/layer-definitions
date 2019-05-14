@@ -16,5 +16,5 @@
 # TODO(xingao): make Dependency Update Service support containers not in GCR.
 
 IMAGE = struct(
-    sha256 = "sha256:cac55e5d97fad634d954d00a5c2a56d80576a08dcc01036011f26b88263f1578",
+    sha256 = "sha256:17f216e8eb523740f5f93a297faf6a6dcb393e14fa911168b4e9df3c0b6ef28e",
 )

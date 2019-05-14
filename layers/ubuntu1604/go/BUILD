@@ -34,7 +34,7 @@ language_tool_layer(
     base = "@ubuntu1604//image",
     env = {
         "GOPATH": "/go",
-        "PATH": "$PATH:/usr/local/go/bin",
+        "PATH": "$$PATH:/usr/local/go/bin",
     },
     tars = [":go_tar"],
 )

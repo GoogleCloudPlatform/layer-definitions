@@ -14,21 +14,14 @@
 
 schemaVersion: "2.0.0"
 
-# Python2 tests.
 commandTests:
+# Python2 tests.
 - name: 'python2-version'
   command: 'python'
   args: ['-V']
   # python outputs to stderr.
   expectedError: ['Python 2.7.*']
-
-fileExistenceTests:
-- name: 'Python2'
-  path: '/usr/bin/python2.7'
-  shouldExist: true
-
 # Python3 tests.
-commandTests:
 - name: 'python3-version'
   command: 'python3'
   args: ['-V']
@@ -39,6 +32,11 @@ commandTests:
   expectedOutput: ['Usage: apt-add-repository']
 
 fileExistenceTests:
+# Python2 tests.
+- name: 'Python2'
+  path: '/usr/bin/python2.7'
+  shouldExist: true
+# Python3 tests.
 - name: 'python3'
   path: '/usr/bin/python3'
   shouldExist: true

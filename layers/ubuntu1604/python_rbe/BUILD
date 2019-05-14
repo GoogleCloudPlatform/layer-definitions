@@ -58,7 +58,7 @@ language_tool_layer(
     name = "python-rbe-ltl",
     base = "@ubuntu1604//image",
     env = {
-        "PATH": "$PATH:/opt/python3.6/bin",
+        "PATH": "$$PATH:/opt/python3.6/bin",
     },
     installables_tar = "@ubuntu1604_python_rbe_debs//file",
     installation_cleanup_commands = PYTHON_CLEANUP_COMMANDS,
