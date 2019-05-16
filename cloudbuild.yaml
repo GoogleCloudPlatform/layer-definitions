@@ -18,14 +18,14 @@ options:
 
 steps:
   # Install buildifier
-  - name: "l.gcr.io/google/bazel:latest"
+  - name: "l.gcr.io/google/bazel"
     entrypoint: "wget"
     args:
     - "-q"
     - "https://github.com/bazelbuild/buildtools/releases/download/0.20.0/buildifier"
 
   # Make the downloaded buildifier executable.
-  - name: "l.gcr.io/google/bazel:latest"
+  - name: "l.gcr.io/google/bazel"
     entrypoint: "chmod"
     args:
     - "+x"
@@ -33,7 +33,7 @@ steps:
     id: "buildifier-enable"
 
   # Run buildifier --mode=check.
-  - name: "l.gcr.io/google/bazel:latest"
+  - name: "l.gcr.io/google/bazel"
     entrypoint: "bash"
     args:
     - "-c"
@@ -41,14 +41,14 @@ steps:
     waitFor: ["buildifier-enable"]
 
   # Run buildifier --lint=warn.
-  - name: "l.gcr.io/google/bazel:latest"
+  - name: "l.gcr.io/google/bazel"
     entrypoint: "bash"
     args:
     - "-c"
     - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
     waitFor: ["buildifier-enable"]
 
-  - name: "l.gcr.io/google/bazel:latest"
+  - name: "l.gcr.io/google/bazel"
     args:
     - "--output_base=/workspace"
     - "test"
