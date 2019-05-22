@@ -38,6 +38,7 @@ download_pkgs(
         "binutils",
         "file",
         "git",
+        "openssh-client",
         "patch",
         "realpath",
         "unzip",
