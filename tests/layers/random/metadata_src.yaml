@@ -1,0 +1,4 @@
+# Hardcoded metadata YAML file that always tags the timestamp file
+# target with "test".
+tags:
+    - test

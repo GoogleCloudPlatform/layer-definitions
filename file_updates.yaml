@@ -86,6 +86,16 @@
     bucket: layer-deps
     dir: ubuntu1604/android_test/debs
 
+# Test target that always generates an update.
+- triggerFile:
+    target: //tests/layers/random:random_file.txt
+    bucket: dep-update-service-test
+    dir: layer-definitions/tests/random
+    metadata:
+        target: //tests/layers/random:metadata.yaml
+        bucket: dep-update-service-test
+        object: layer-definitions/tests/random/metadata.yaml
+
 # ================================= Ubuntu1404 =================================
 
 # Bazel debian package tarball.
