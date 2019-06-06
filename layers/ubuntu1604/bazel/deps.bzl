@@ -20,9 +20,9 @@ def deps():
     excludes = native.existing_rules().keys()
 
     # The official Bazel installer.sh.
-    if "bazel_installer" not in excludes:
+    if "ubuntu1604_bazel_installer" not in excludes:
         http_file(
-            name = "bazel_installer",
+            name = "ubuntu1604_bazel_installer",
             downloaded_file_path = "bazel-installer.sh",
             sha256 = BAZEL_INSTALLER.sha256,
             urls = [

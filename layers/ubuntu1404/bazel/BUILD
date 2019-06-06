@@ -56,7 +56,7 @@ toolchain_container(
     base = "@ubuntu1404//image",
     files = [
         ":bazel.bazelrc",
-        "@bazel_installer//file",
+        "@ubuntu1404_bazel_installer//file",
     ],
     packages = [
         "unzip",
