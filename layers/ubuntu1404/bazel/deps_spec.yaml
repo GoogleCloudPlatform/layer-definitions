@@ -19,20 +19,19 @@ gcsDeps:
 
   # Bazel release installer.
   #
-  # As of Bazel 0.27.0, it can no longer run in Ubuntu 14.04. So stop DUS from
-  # updating the revision for Bazel installer.
-  #
-  # - name: "BAZEL_INSTALLER"
-  #   bucket: "bazel"
-  #   versionRegex: "\\d+(\\.\\d+)*"
-  #   fileRegex: "^\\d+(\\.\\d+)*/release/bazel-\\d+(\\.\\d+)*-installer-linux-x86_64\\.sh\\.sha256$"
-  #   excludes: "/rc"
-  #   readShaFromFile: true
-  #   startIndex: 0
-  #   releasePolicies:
-  #     - tag: "default"
-  #       # Everyday weekday at 5am.
-  #       schedule: "0 0 5 * * Mon-Fri"
+  # As of Bazel 0.27.0, it can no longer run in Ubuntu 14.04. So hardcode DUS to
+  # match Bazel installer 0.26.1 (the newest one before 0.27.0).
+  - name: "BAZEL_INSTALLER"
+    bucket: "bazel"
+    versionRegex: "0.26.1"
+    fileRegex: "^\\d+(\\.\\d+)*/release/bazel-\\d+(\\.\\d+)*-installer-linux-x86_64\\.sh\\.sha256$"
+    excludes: "/rc"
+    readShaFromFile: true
+    startIndex: 0
+    releasePolicies:
+      - tag: "default"
+        # Everyday weekday at 5am.
+        schedule: "0 0 5 * * Mon-Fri"
 
   # The Debian packages tarball pulled from the GCS bucket required for the Ubuntu1404 Bazel layer.
   - name: "DEBS_TARBALL"
