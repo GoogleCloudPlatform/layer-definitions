@@ -74,5 +74,5 @@ steps:
     - "--remote_timeout=3600"
     - "--auth_enabled=true"
     - "--test_output=errors"
-    - "--loading_phase_threads=1"
+    - "--host_force_python=PY2"
     - "//layers/..."
