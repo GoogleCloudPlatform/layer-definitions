@@ -22,9 +22,9 @@ load(
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "e886e0624871dcce823cccc7f9a634c58b0d68fdc3ad6577347826558f1581d8",
-    strip_prefix = "bazel-toolchains-9f6cd65b5fd8bc85634dafc99075556c06d8d3a6",
-    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/9f6cd65b5fd8bc85634dafc99075556c06d8d3a6.tar.gz"],
+    sha256 = "322ef052f15d61fdda3ff5c7be4b03d24e6543320b3b4b41da307aebd75b3c20",
+    strip_prefix = "bazel-toolchains-ae9c35af59cfe8af4a631550c0c8d37ff7f4e7da",
+    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/ae9c35af59cfe8af4a631550c0c8d37ff7f4e7da.tar.gz"],
 )
 
 http_archive(
@@ -36,9 +36,9 @@ http_archive(
 
 http_archive(
     name = "base_images_docker",
-    sha256 = "16da54ef0734a0658d7006bc8bf6b9be26b963edec497b13974a1bfb46cefc41",
-    strip_prefix = "base-images-docker-7fdd2bb83a6957fe66712bd5238087b257b04378",
-    urls = ["https://github.com/GoogleContainerTools/base-images-docker/archive/7fdd2bb83a6957fe66712bd5238087b257b04378.tar.gz"],
+    sha256 = "0319ed0e058ec57cb15240cad44b52743b68239e5875fa41db51a6f6ac8e67be",
+    strip_prefix = "base-images-docker-d6f2757c3c48bd6c08e6484d02b84ed123d50ffa",
+    urls = ["https://github.com/GoogleContainerTools/base-images-docker/archive/d6f2757c3c48bd6c08e6484d02b84ed123d50ffa.tar.gz"],
 )
 
 http_archive(
@@ -62,7 +62,7 @@ container_repositories()
 http_file(
     name = "gcloud_gpg",
     downloaded_file_path = "gcloud_gpg",
-    sha256 = "226ba1072f20e4ff97ee4f94e87bf45538a900a6d9b25399a7ac3dc5a2f3af87",
+    # TODO (smukherj1): Re-enable sha256 digest once stable.
     urls = ["https://packages.cloud.google.com/apt/doc/apt-key.gpg"],
 )
 
@@ -88,6 +88,32 @@ http_file(
 # These are used by CI only.
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 load("@bazel_toolchains//rules:environments.bzl", "clang_env")
+
+# Used by FUS to run the metadata rules from bazel-toolchains.
+load("@bazel_toolchains//repositories:repositories.bzl", bazel_toolchains_repos = "repositories")
+
+bazel_toolchains_repos()
+
+load("@bazel_toolchains//repositories:go_repositories.bzl", bazel_toolchains_go_repos = "go_deps")
+
+bazel_toolchains_go_repos()
+
+# Load python & pip dependencies needed by by the @base_images_docker//package_mangers
+# package.
+http_archive(
+    name = "io_bazel_rules_python",
+    sha256 = "9a3d71e348da504a9c4c5e8abd4cb822f7afb32c613dc6ee8b8535333a81a938",
+    strip_prefix = "rules_python-fdbb17a4118a1728d19e638a5291b4c4266ea5b8",
+    urls = ["https://github.com/bazelbuild/rules_python/archive/fdbb17a4118a1728d19e638a5291b4c4266ea5b8.tar.gz"],
+)
+load("@io_bazel_rules_python//python:pip.bzl", "pip_import", "pip_repositories")
+pip_repositories()
+pip_import(
+    name = "pip_deps",
+    requirements = "@base_images_docker//package_managers:requirements-pip.txt",
+)
+load("@pip_deps//:requirements.bzl", "pip_install")
+pip_install()
 
 rbe_autoconfig(
     name = "rbe_toolchain_config",

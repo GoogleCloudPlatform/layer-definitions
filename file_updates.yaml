@@ -26,6 +26,10 @@
     target: //layers/ubuntu1604/bazel:bazel_debs.tar
     bucket: layer-deps
     dir: ubuntu1604/bazel/debs
+    metadata:
+        target: //layers/ubuntu1604/bazel:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1604/bazel/debs/metadata.yaml
 
 # Clang debian package tarball.
 - triggerFile:
