@@ -106,13 +106,18 @@ http_archive(
     strip_prefix = "rules_python-fdbb17a4118a1728d19e638a5291b4c4266ea5b8",
     urls = ["https://github.com/bazelbuild/rules_python/archive/fdbb17a4118a1728d19e638a5291b4c4266ea5b8.tar.gz"],
 )
+
 load("@io_bazel_rules_python//python:pip.bzl", "pip_import", "pip_repositories")
+
 pip_repositories()
+
 pip_import(
     name = "pip_deps",
     requirements = "@base_images_docker//package_managers:requirements-pip.txt",
 )
+
 load("@pip_deps//:requirements.bzl", "pip_install")
+
 pip_install()
 
 rbe_autoconfig(

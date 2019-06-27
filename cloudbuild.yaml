@@ -18,14 +18,14 @@ options:
 
 steps:
   # Install buildifier
-  - name: "l.gcr.io/google/bazel"
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "wget"
     args:
     - "-q"
     - "https://github.com/bazelbuild/buildtools/releases/download/0.20.0/buildifier"
 
   # Make the downloaded buildifier executable.
-  - name: "l.gcr.io/google/bazel"
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "chmod"
     args:
     - "+x"
@@ -33,7 +33,7 @@ steps:
     id: "buildifier-enable"
 
   # Run buildifier --mode=check.
-  - name: "l.gcr.io/google/bazel"
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "bash"
     args:
     - "-c"
@@ -41,14 +41,15 @@ steps:
     waitFor: ["buildifier-enable"]
 
   # Run buildifier --lint=warn.
-  - name: "l.gcr.io/google/bazel"
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "bash"
     args:
     - "-c"
     - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
     waitFor: ["buildifier-enable"]
 
-  - name: "l.gcr.io/google/bazel"
+  - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
+    entrypoint: "bazel"
     args:
     - "--output_base=/workspace"
     - "test"
@@ -66,6 +67,10 @@ steps:
     - "--spawn_strategy=remote"
     - "--strategy=Javac=remote"
     - "--strategy=Closure=remote"
+    # This ensures the "security_check" rule in
+    # @base_images_docker//package_managers:security_check.bzl is executed
+    # locally. It runs gcloud under the hood which won't work on RBE.
+    - "--strategy=ImageSecurityCheck=local"
     - "--genrule_strategy=remote"
     - "--define=EXECUTOR=remote"
     - "--remote_cache=remotebuildexecution.googleapis.com"
