@@ -27,7 +27,7 @@ gcsDeps:
     readShaFromFile: true
     startIndex: 0
     fusMetadataBucket: "layer-deps"
-    fusMetadataObject: "ubuntu1604/bazel/metadata.yaml"
+    fusMetadataObject: "ubuntu1604/bazel/metadata/debs/metadata.yaml"
     releasePolicies:
       - tag: "default"
         # Everyday weekday at 5am.

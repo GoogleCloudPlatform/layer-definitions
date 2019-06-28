@@ -29,7 +29,7 @@
     metadata:
         target: //layers/ubuntu1604/bazel:metadata.yaml
         bucket: dep-update-service-test
-        object: ubuntu1604/bazel/metadata.yaml
+        object: ubuntu1604/bazel/metadata/debs/metadata.yaml
 
 # Clang debian package tarball.
 - triggerFile:
