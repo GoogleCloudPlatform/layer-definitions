@@ -98,7 +98,7 @@
     metadata:
         target: //tests/layers/random:metadata.yaml
         bucket: dep-update-service-test
-        object: layer-definitions/tests/random/metadata.yaml
+        object: layer-definitions/tests/metadata/random/metadata.yaml
 
 # ================================= Ubuntu1404 =================================
 
