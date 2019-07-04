@@ -58,7 +58,9 @@ genrule(
         ":bazel_tar/bazel.tar",
     ],
     outs = ["bazel_version_metadata.yaml"],
-    cmd = "$(location extract_version.sh) $(location :bazel_tar/bazel.tar) $@",
+    cmd = "$(location extract_version.sh) {} $(location :bazel_tar/bazel.tar) $@".format(
+        BAZEL_INSTALLER.revision,
+    ),
 )
 
 # Transform the packages metadata csv produced by download_pkgs into a YAML
