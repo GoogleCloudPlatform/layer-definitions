@@ -1,0 +1,210 @@
+DEBS_TARBALL:
+  packages:
+  - name: binutils
+    version: 2.26.1-1ubuntu1~16.04.8
+  - name: bzip2
+    version: 1.0.6-8ubuntu0.2
+  - name: cpio
+    version: 2.11+dfsg-5ubuntu1
+  - name: dpkg-dev
+    version: 1.18.4ubuntu1.5
+  - name: gcc-5-base
+    version: 5.4.0-6ubuntu1~16.04.11
+  - name: gcc-6-base
+    version: 6.0.1-0ubuntu1
+  - name: libasyncns0
+    version: 0.8-5build1
+  - name: libbsd0
+    version: 0.8.2-1
+  - name: libbz2-1.0
+    version: 1.0.6-8ubuntu0.2
+  - name: libc-dev-bin
+    version: 2.23-0ubuntu11
+  - name: libc6
+    version: 2.23-0ubuntu11
+  - name: libc6-dev
+    version: 2.23-0ubuntu11
+  - name: libdbus-1-3
+    version: 1.10.6-1ubuntu3.4
+  - name: libdpkg-perl
+    version: 1.18.4ubuntu1.5
+  - name: libdrm-amdgpu1
+    version: 2.4.91-2~16.04.1
+  - name: libdrm-common
+    version: 2.4.91-2~16.04.1
+  - name: libdrm-intel1
+    version: 2.4.91-2~16.04.1
+  - name: libdrm-nouveau2
+    version: 2.4.91-2~16.04.1
+  - name: libdrm-radeon1
+    version: 2.4.91-2~16.04.1
+  - name: libdrm2
+    version: 2.4.91-2~16.04.1
+  - name: libedit2
+    version: 3.1-20150325-1ubuntu2
+  - name: libelf1
+    version: 0.165-3ubuntu1.2
+  - name: libexpat1
+    version: 2.1.0-7ubuntu0.16.04.4
+  - name: libflac8
+    version: 1.3.1-4
+  - name: libfontenc1
+    version: 1:1.1.3-1
+  - name: libfreetype6
+    version: 2.6.1-0.1ubuntu2.3
+  - name: libgcc1
+    version: 1:6.0.1-0ubuntu1
+  - name: libgdbm3
+    version: 1.8.3-13.1
+  - name: libgl1-mesa-dri
+    version: 18.0.5-0ubuntu0~16.04.1
+  - name: libgl1-mesa-glx
+    version: 18.0.5-0ubuntu0~16.04.1
+  - name: libglapi-mesa
+    version: 18.0.5-0ubuntu0~16.04.1
+  - name: libglib2.0-0
+    version: 2.48.2-0ubuntu4.3
+  - name: libglib2.0-bin
+    version: 2.48.2-0ubuntu4.3
+  - name: libglib2.0-data
+    version: 2.48.2-0ubuntu4.3
+  - name: libglib2.0-dev
+    version: 2.48.2-0ubuntu4.3
+  - name: libice6
+    version: 2:1.0.9-1
+  - name: libjson-c2
+    version: 0.11-4ubuntu2
+  - name: libllvm6.0
+    version: 1:6.0-1ubuntu2~16.04.1
+  - name: libogg0
+    version: 1.3.2-1
+  - name: libpciaccess0
+    version: 0.13.4-1
+  - name: libpcre16-3
+    version: 2:8.38-3.1
+  - name: libpcre3-dev
+    version: 2:8.38-3.1
+  - name: libpcre32-3
+    version: 2:8.38-3.1
+  - name: libpcrecpp0v5
+    version: 2:8.38-3.1
+  - name: libperl5.22
+    version: 5.22.1-9ubuntu0.6
+  - name: libpixman-1-0
+    version: 0.33.6-1
+  - name: libpng12-0
+    version: 1.2.54-1ubuntu1.1
+  - name: libpulse-dev
+    version: 1:8.0-0ubuntu3.10
+  - name: libpulse-mainloop-glib0
+    version: 1:8.0-0ubuntu3.10
+  - name: libpulse0
+    version: 1:8.0-0ubuntu3.10
+  - name: libpython-stdlib
+    version: 2.7.12-1~16.04
+  - name: libpython2.7-minimal
+    version: 2.7.12-1ubuntu0~16.04.4
+  - name: libpython2.7-stdlib
+    version: 2.7.12-1ubuntu0~16.04.4
+  - name: libsensors4
+    version: 1:3.4.0-2
+  - name: libsm6
+    version: 2:1.2.2-1
+  - name: libsndfile1
+    version: 1.0.25-10ubuntu0.16.04.2
+  - name: libstdc++6
+    version: 5.4.0-6ubuntu1~16.04.11
+  - name: libvorbis0a
+    version: 1.3.5-3ubuntu0.2
+  - name: libvorbisenc2
+    version: 1.3.5-3ubuntu0.2
+  - name: libwrap0
+    version: 7.6.q-25
+  - name: libx11-6
+    version: 2:1.6.3-1ubuntu2.1
+  - name: libx11-data
+    version: 2:1.6.3-1ubuntu2.1
+  - name: libx11-xcb1
+    version: 2:1.6.3-1ubuntu2.1
+  - name: libxau6
+    version: 1:1.0.8-1
+  - name: libxaw7
+    version: 2:1.0.13-1
+  - name: libxcb-dri2-0
+    version: 1.11.1-1ubuntu1
+  - name: libxcb-dri3-0
+    version: 1.11.1-1ubuntu1
+  - name: libxcb-glx0
+    version: 1.11.1-1ubuntu1
+  - name: libxcb-present0
+    version: 1.11.1-1ubuntu1
+  - name: libxcb-sync1
+    version: 1.11.1-1ubuntu1
+  - name: libxcb1
+    version: 1.11.1-1ubuntu1
+  - name: libxdamage1
+    version: 1:1.1.4-2
+  - name: libxdmcp6
+    version: 1:1.1.2-1.1
+  - name: libxext6
+    version: 2:1.3.3-1
+  - name: libxfixes3
+    version: 1:5.0.1-2
+  - name: libxfont1
+    version: 1:1.5.1-1ubuntu0.16.04.4
+  - name: libxkbfile1
+    version: 1:1.0.9-0ubuntu1
+  - name: libxmu6
+    version: 2:1.1.2-2
+  - name: libxmuu1
+    version: 2:1.1.2-2
+  - name: libxpm4
+    version: 1:3.5.11-1ubuntu0.16.04.1
+  - name: libxshmfence1
+    version: 1.2-1
+  - name: libxt6
+    version: 1:1.1.5-0ubuntu1
+  - name: libxxf86vm1
+    version: 1:1.1.4-1
+  - name: linux-libc-dev
+    version: 4.4.0-154.181
+  - name: lsof
+    version: 4.89+dfsg-0.1
+  - name: make
+    version: 4.1-6
+  - name: mime-support
+    version: 3.59ubuntu1
+  - name: patch
+    version: 2.7.5-1ubuntu0.16.04.1
+  - name: perl
+    version: 5.22.1-9ubuntu0.6
+  - name: perl-modules-5.22
+    version: 5.22.1-9ubuntu0.6
+  - name: pkg-config
+    version: 0.29.1-0ubuntu1
+  - name: python
+    version: 2.7.12-1~16.04
+  - name: python-minimal
+    version: 2.7.12-1~16.04
+  - name: python2.7
+    version: 2.7.12-1ubuntu0~16.04.4
+  - name: python2.7-minimal
+    version: 2.7.12-1ubuntu0~16.04.4
+  - name: x11-common
+    version: 1:7.7+13ubuntu3.1
+  - name: x11-xkb-utils
+    version: 7.7+2
+  - name: xauth
+    version: 1:1.0.9-1ubuntu2
+  - name: xkb-data
+    version: 2.16-1ubuntu1
+  - name: xserver-common
+    version: 2:1.18.4-0ubuntu0.8
+  - name: xvfb
+    version: 2:1.18.4-0ubuntu0.8
+  - name: xz-utils
+    version: 5.1.1alpha+20120614-2ubuntu2
+  - name: zlib1g
+    version: 1:1.2.8.dfsg-2ubuntu4.1
+  - name: zlib1g-dev
+    version: 1:1.2.8.dfsg-2ubuntu4.1
