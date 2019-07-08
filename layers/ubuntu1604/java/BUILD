@@ -16,6 +16,7 @@ load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
 load("@base_images_docker//util:run.bzl", "container_run_and_extract")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer", "toolchain_container")
+load("@bazel_toolchains//rules/container:packages_metadata.bzl", "packages_metadata")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load(":revisions.bzl", "OPENJDK_INSTALLER", "OPENJDK_SRC")
@@ -39,6 +40,13 @@ download_pkgs(
         "openjdk-8-jdk-headless",
         "openjdk-8-jre-headless",
     ],
+)
+
+# Transform the packages metadata csv produced by download_pkgs into a YAML
+# file.
+packages_metadata(
+    name = "metadata",
+    metadata_csv = ":java_debs_metadata.csv",
 )
 
 # /etc/ssl/certs/java/cacerts is generated when `ca-certificates-java` is

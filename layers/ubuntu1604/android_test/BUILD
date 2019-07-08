@@ -19,6 +19,7 @@ load(
     "language_tool_layer",
     "toolchain_container",
 )
+load("@bazel_toolchains//rules/container:packages_metadata.bzl", "packages_metadata")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 
 licenses(["notice"])  # Apache 2.0
@@ -47,6 +48,13 @@ download_pkgs(
         "xvfb",
         "zlib1g:i386",
     ],
+)
+
+# Transform the packages metadata csv produced by download_pkgs into a YAML
+# file.
+packages_metadata(
+    name = "metadata",
+    metadata_csv = ":android_test_debs_metadata.csv",
 )
 
 # Required as the base image for android-test-ltl in order to be able to

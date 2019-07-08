@@ -16,6 +16,7 @@ load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
 load("@base_images_docker//util:run.bzl", "container_run_and_extract")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
+load("@bazel_toolchains//rules/container:packages_metadata.bzl", "packages_metadata")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 
 licenses(["notice"])  # Apache 2.0
@@ -37,6 +38,13 @@ download_pkgs(
         "python-setuptools",
         "python3-dev",
     ],
+)
+
+# Transform the packages metadata csv produced by download_pkgs into a YAML
+# file.
+packages_metadata(
+    name = "metadata",
+    metadata_csv = ":python_rbe_debs_metadata.csv",
 )
 
 container_run_and_extract(

@@ -42,24 +42,41 @@
     target: //layers/ubuntu1604/docker:docker_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/docker/debs
+    metadata:
+        target: //layers/ubuntu1604/docker:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/docker/metadata/debs/metadata.yaml
+
 
 # Gcloud debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/gcloud:gcloud_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/gcloud/debs
+    metadata:
+        target: //layers/ubuntu1604/gcloud:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/gcloud/metadata/debs/metadata.yaml
 
 # Python debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/python:python_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/python/debs
+    metadata:
+        target: //layers/ubuntu1604/python:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/python/metadata/debs/metadata.yaml
 
 # Python for RBE debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/python_rbe:python_rbe_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/python_rbe/debs
+    metadata:
+        target: //layers/ubuntu1604/python_rbe:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/python_rbe/metadata/debs/metadata.yaml
 
 # Java debian package tarball and java cacerts file generated when
 # installing `ca-certificates-java`.
@@ -67,6 +84,10 @@
     target: //layers/ubuntu1604/java:java_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/java/debs
+    metadata:
+        target: //layers/ubuntu1604/java:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/java/metadata/debs/metadata.yaml
   extraFiles:
     - target: //layers/ubuntu1604/java:cacerts_tar/cacerts.tar
       bucket: dep-update-service-test
@@ -77,18 +98,30 @@
     target: //layers/ubuntu1604/rbe_tools:rbe_tools_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/rbe_tools/debs
+    metadata:
+        target: //layers/ubuntu1604/rbe_tools:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/rbe_tools/metadata/debs/metadata.yaml
 
 # Webtest debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/webtest:webtest_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/webtest/debs
+    metadata:
+        target: //layers/ubuntu1604/webtest:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/webtest/metadata/debs/metadata.yaml
 
 # Android test debian package tarball.
 - triggerFile:
     target: //layers/ubuntu1604/android_test:android_test_debs.tar
     bucket: dep-update-service-test
     dir: ubuntu1604/android_test/debs
+    metadata:
+        target: //layers/ubuntu1604/android_test:metadata.yaml
+        bucket: dep-update-service-test
+        object: ubuntu1604/android_test/metadata/debs/metadata.yaml
 
 # Test target that always generates an update.
 - triggerFile:

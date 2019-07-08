@@ -16,6 +16,7 @@ load("@base_images_docker//package_managers:apt_key.bzl", "add_apt_key")
 load("@base_images_docker//package_managers:download_pkgs.bzl", "download_pkgs")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
+load("@bazel_toolchains//rules/container:packages_metadata.bzl", "packages_metadata")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 
 licenses(["notice"])  # Apache 2.0
@@ -46,6 +47,13 @@ download_pkgs(
     packages = [
         "google-cloud-sdk",
     ],
+)
+
+# Transform the packages metadata csv produced by download_pkgs into a YAML
+# file.
+packages_metadata(
+    name = "metadata",
+    metadata_csv = ":gcloud_debs_metadata.csv",
 )
 
 language_tool_layer(
