@@ -16,8 +16,6 @@ DEBS_TARBALL:
     version: 0.8-5build1
   - name: libbsd0
     version: 0.8.2-1
-  - name: libbz2-1.0
-    version: 1.0.6-8ubuntu0.2
   - name: libc-dev-bin
     version: 2.23-0ubuntu11
   - name: libc6
