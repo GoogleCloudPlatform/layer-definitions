@@ -50,19 +50,6 @@ download_pkgs(
     ],
 )
 
-# Generate a metadata file containing the version of Bazel.
-genrule(
-    name = "bazel_version_metadata",
-    srcs = [
-        "extract_version.sh",
-        ":bazel_tar/bazel.tar",
-    ],
-    outs = ["bazel_version_metadata.yaml"],
-    cmd = "$(location extract_version.sh) {} $(location :bazel_tar/bazel.tar) $@".format(
-        BAZEL_INSTALLER.revision,
-    ),
-)
-
 # Transform the packages metadata csv produced by download_pkgs into a YAML
 # file.
 packages_metadata(
@@ -84,7 +71,6 @@ metadata_merge(
     srcs = [
         "bazel_debs_security_check.yaml",
         "bazel_debs_yaml_metadata.yaml",
-        ":bazel_version_metadata.yaml",
     ],
 )
 
