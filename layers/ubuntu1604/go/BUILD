@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@bazel_toolchains//rules/container:docker_toolchains.bzl", "language_tool_layer")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
+load(
+    "@io_bazel_rules_docker//docker/toolchain_container:toolchain_container.bzl",
+    "language_tool_layer",
+)
 load(":revisions.bzl", "GO_INSTALLER")
 
 licenses(["notice"])  # Apache 2.0

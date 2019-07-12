@@ -68,7 +68,7 @@ steps:
     - "--strategy=Javac=remote"
     - "--strategy=Closure=remote"
     # This ensures the "security_check" rule in
-    # @base_images_docker//package_managers:security_check.bzl is executed
+    # @io_bazel_rules_docker//docker/security:security_check.bzl is executed
     # locally. It runs gcloud under the hood which won't work on RBE.
     - "--strategy=ImageSecurityCheck=local"
     - "--genrule_strategy=remote"
