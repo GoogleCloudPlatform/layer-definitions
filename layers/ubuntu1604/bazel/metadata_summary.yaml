@@ -1,1 +1,42 @@
-{}
+DEBS_TARBALL:
+  packages:
+  - name: bash-completion
+    version: 1:2.1-4.2ubuntu1.1
+  - name: binutils
+    version: 2.26.1-1ubuntu1~16.04.8
+  - name: file
+    version: 1:5.25-2ubuntu1.2
+  - name: git
+    version: 1:2.7.4-0ubuntu1.6
+  - name: git-man
+    version: 1:2.7.4-0ubuntu1.6
+  - name: libbsd0
+    version: 0.8.2-1
+  - name: libedit2
+    version: 3.1-20150325-1ubuntu2
+  - name: liberror-perl
+    version: 0.17-1.2
+  - name: libexpat1
+    version: 2.1.0-7ubuntu0.16.04.4
+  - name: libgdbm3
+    version: 1.8.3-13.1
+  - name: libmagic1
+    version: 1:5.25-2ubuntu1.2
+  - name: libperl5.22
+    version: 5.22.1-9ubuntu0.6
+  - name: openssh-client
+    version: 1:7.2p2-4ubuntu2.8
+  - name: patch
+    version: 2.7.5-1ubuntu0.16.04.1
+  - name: perl
+    version: 5.22.1-9ubuntu0.6
+  - name: perl-modules-5.22
+    version: 5.22.1-9ubuntu0.6
+  - name: unzip
+    version: 6.0-20ubuntu1
+  - name: wget
+    version: 1.17.1-1ubuntu1.5
+  - name: xz-utils
+    version: 5.1.1alpha+20120614-2ubuntu2
+  - name: zip
+    version: 3.0-11
