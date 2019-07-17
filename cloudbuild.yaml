@@ -48,6 +48,14 @@ steps:
     - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
     waitFor: ["buildifier-enable"]
 
+  # Run the file update spec syntax checker.
+  - name: "gcr.io/asci-toolchain/container_release_tools/file_update/validators/syntax"
+    args:
+    # Log to stderr instead of log files in /tmp which is not writable in
+    # the container.
+    - "-logtostderr=true"
+    - "-specFile=file_updates.yaml"
+
   - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "bazel"
     args:
