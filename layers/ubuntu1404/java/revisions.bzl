@@ -26,11 +26,11 @@ OPENJDK_SRC = struct(
 )
 
 DEBS_TARBALL = struct(
-    revision = "1561735077",
-    sha256 = "31eacd8b2896369b982b62a42c6c3c082ba9ba9149a063b1f9231500f44d9b44",
+    revision = "1563490937",
+    sha256 = "818e1b662a879d67bdf680b78981dc4972cfc8aeca6fffa7a2171c2c45b611ab",
 )
 
 CACERTS = struct(
-    revision = "1561735113",
-    sha256 = "2fe61973d42124aa6b78d181a08be4b712074787d6a1ea2769f48867ab7790ac",
+    revision = "1563490937",
+    sha256 = "7b7e50d123fc0b0bf55c3b0d10ef3ef3c50556198cb259a2a1de3060d3b1b43e",
 )
