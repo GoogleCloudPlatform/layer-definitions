@@ -77,15 +77,6 @@ http_file(
     urls = ["https://download.docker.com/linux/ubuntu/gpg"],
 )
 
-# Launchpad OpenJDK key used when install java in trusty.
-# This is NOT needed to use the language_tool_layer target of the ubuntu1404 Java layer.
-http_file(
-    name = "launchpad_openjdk_gpg",
-    downloaded_file_path = "launchpad_openjdk_gpg",
-    sha256 = "54b6274820df34a936ccc6f5cb725a9b7bb46075db7faf0ef7e2d86452fa09fd",
-    urls = ["http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xEB9B1D8886F44E2A"],
-)
-
 # These are used by CI only.
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 load("@bazel_toolchains//rules:environments.bzl", "clang_env")
@@ -161,33 +152,3 @@ ubuntu1604_webtest_deps()
 load("//layers/ubuntu1604/android_test:deps.bzl", ubuntu1604_android_test_deps = "deps")
 
 ubuntu1604_android_test_deps()
-
-# ================================= Ubuntu1404 =================================
-
-load("//layers/ubuntu1404/base:deps.bzl", ubuntu1404_base_deps = "deps")
-
-ubuntu1404_base_deps()
-
-load("//layers/ubuntu1404/bazel:deps.bzl", ubuntu1404_bazel_deps = "deps")
-
-ubuntu1404_bazel_deps()
-
-load("//layers/ubuntu1404/gcc:deps.bzl", ubuntu1404_gcc_deps = "deps")
-
-ubuntu1404_gcc_deps()
-
-load("//layers/ubuntu1404/docker:deps.bzl", ubuntu1404_docker_deps = "deps")
-
-ubuntu1404_docker_deps()
-
-load("//layers/ubuntu1404/gcloud:deps.bzl", ubuntu1404_gcloud_deps = "deps")
-
-ubuntu1404_gcloud_deps()
-
-load("//layers/ubuntu1404/java:deps.bzl", ubuntu1404_java_deps = "deps")
-
-ubuntu1404_java_deps()
-
-load("//layers/ubuntu1404/python:deps.bzl", ubuntu1404_python_deps = "deps")
-
-ubuntu1404_python_deps()
