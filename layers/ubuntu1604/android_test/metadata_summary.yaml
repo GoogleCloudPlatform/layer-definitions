@@ -165,7 +165,7 @@ DEBS_TARBALL:
   - name: libxxf86vm1
     version: 1:1.1.4-1
   - name: linux-libc-dev
-    version: 4.4.0-154.181
+    version: 4.4.0-157.185
   - name: lsof
     version: 4.89+dfsg-0.1
   - name: make
@@ -173,7 +173,7 @@ DEBS_TARBALL:
   - name: mime-support
     version: 3.59ubuntu1
   - name: patch
-    version: 2.7.5-1ubuntu0.16.04.1
+    version: 2.7.5-1ubuntu0.16.04.2
   - name: perl
     version: 5.22.1-9ubuntu0.6
   - name: perl-modules-5.22
