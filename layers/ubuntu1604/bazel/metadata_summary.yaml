@@ -27,7 +27,7 @@ DEBS_TARBALL:
   - name: openssh-client
     version: 1:7.2p2-4ubuntu2.8
   - name: patch
-    version: 2.7.5-1ubuntu0.16.04.1
+    version: 2.7.5-1ubuntu0.16.04.2
   - name: perl
     version: 5.22.1-9ubuntu0.6
   - name: perl-modules-5.22
