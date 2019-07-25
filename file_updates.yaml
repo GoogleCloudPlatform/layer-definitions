@@ -36,6 +36,10 @@
     target: //layers/ubuntu1604/clang:clang_debs.tar
     bucket: layer-deps
     dir: ubuntu1604/clang/debs
+    metadata:
+        target: //layers/ubuntu1604/clang:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1604/clang/metadata/debs/metadata.yaml
 
 # Docker debian package tarball.
 - triggerFile:
