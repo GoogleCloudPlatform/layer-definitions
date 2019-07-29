@@ -24,6 +24,8 @@ licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
 
+exports_files(glob(["*.yaml"]))
+
 pkg_tar(
     name = "go_tar",
     package_dir = "/usr/local/",

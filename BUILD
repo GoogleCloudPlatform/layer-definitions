@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load(
+    "@io_bazel_rules_docker//contrib/automatic_container_release:configs_test.bzl",
+    "configs_test",
+)
+
 licenses(["notice"])  # Apache 2.0
 
 package(default_visibility = ["//visibility:public"])
@@ -29,4 +34,25 @@ platform(
           value: "true"
         }
         """,
+)
+
+configs_test(
+    name = "configs_test",
+    dependency_update_specs = [
+        "//layers/ubuntu1604/java:deps_spec.yaml",
+        "//layers/ubuntu1604/bazel:deps_spec.yaml",
+        "//layers/ubuntu1604/python_rbe:deps_spec.yaml",
+        "//layers/ubuntu1604/python:deps_spec.yaml",
+        "//layers/ubuntu1604/rbe_tools:deps_spec.yaml",
+        "//layers/ubuntu1604/base:deps_spec.yaml",
+        "//layers/ubuntu1604/go:deps_spec.yaml",
+        "//layers/ubuntu1604/android_test:deps_spec.yaml",
+        "//layers/ubuntu1604/clang:deps_spec.yaml",
+        "//layers/ubuntu1604/docker:deps_spec.yaml",
+        "//layers/ubuntu1604/webtest:deps_spec.yaml",
+        "//layers/ubuntu1604/gcloud:deps_spec.yaml",
+    ],
+    file_update_specs = [
+        "file_updates.yaml",
+    ],
 )

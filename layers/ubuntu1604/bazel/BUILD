@@ -13,11 +13,9 @@
 # limitations under the License.
 
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
-load("@bazel_toolchains//rules/container:metadata_merge.bzl", "metadata_merge")
 load("@bazel_toolchains//rules/container:packages_metadata.bzl", "packages_metadata")
 load("@io_bazel_rules_docker//contrib:test.bzl", "container_test")
 load("@io_bazel_rules_docker//docker/package_managers:download_pkgs.bzl", "download_pkgs")
-load("@io_bazel_rules_docker//docker/security:security_check.bzl", "security_check")
 load(
     "@io_bazel_rules_docker//docker/toolchain_container:toolchain_container.bzl",
     "language_tool_layer",
@@ -57,25 +55,8 @@ download_pkgs(
 # Transform the packages metadata csv produced by download_pkgs into a YAML
 # file.
 packages_metadata(
-    name = "bazel_debs_yaml_metadata",
-    metadata_csv = ":bazel_debs_metadata.csv",
-)
-
-# Run a vulnerability check on the bazel image and generate a YAML file with
-# a list of vulnerability tags.
-security_check(
-    name = "bazel_debs_security_check",
-    image = "gcr.io/asci-toolchain/nosla-ubuntu16-04-bazel",
-)
-
-# Merge the packages metadata & vulnerability YAML into a single merged YAML
-# file.
-metadata_merge(
     name = "metadata",
-    srcs = [
-        "bazel_debs_security_check.yaml",
-        "bazel_debs_yaml_metadata.yaml",
-    ],
+    metadata_csv = ":bazel_debs_metadata.csv",
 )
 
 # Create intermediate images with the Bazel installer.

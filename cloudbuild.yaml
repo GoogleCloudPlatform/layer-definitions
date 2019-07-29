@@ -48,14 +48,6 @@ steps:
     - "/workspace/buildifier --lint=warn $(find . -name BUILD -o -name WORKSPACE -o -name '*.bzl' -type f)"
     waitFor: ["buildifier-enable"]
 
-  # Run the file update spec syntax checker.
-  - name: "gcr.io/asci-toolchain/container_release_tools/file_update/validators/syntax"
-    args:
-    # Log to stderr instead of log files in /tmp which is not writable in
-    # the container.
-    - "-logtostderr=true"
-    - "-specFile=file_updates.yaml"
-
   - name: "gcr.io/asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud"
     entrypoint: "bazel"
     args:
@@ -79,6 +71,10 @@ steps:
     # @io_bazel_rules_docker//docker/security:security_check.bzl is executed
     # locally. It runs gcloud under the hood which won't work on RBE.
     - "--strategy=ImageSecurityCheck=local"
+    # Run the config test locally because it runs docker which needs to pull
+    # image and the credentials to do this aren't available on the remote
+    # machines.
+    - "--strategy_regexp=//:configs_test=local"
     - "--genrule_strategy=remote"
     - "--define=EXECUTOR=remote"
     - "--remote_cache=remotebuildexecution.googleapis.com"
