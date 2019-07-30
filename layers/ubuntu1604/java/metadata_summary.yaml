@@ -1,4 +1,4 @@
-OPENJDK_INSTALLER:
+DEBS_TARBALL:
   packages:
   - name: ca-certificates-java
     version: 20160321ubuntu1

@@ -24,8 +24,6 @@ gcsDeps:
     versionRegex: "11.*linux_x64-allmodules-[a-z0-9]+-\\d+"
     fileRegex: "^openjdk\\/azul-zulu11.*linux_x64-allmodules.*.tar.gz$"
     startsWith: "openjdk/azul-zulu"
-    fusMetadataBucket: "layer-deps"
-    fusMetadataObject: "ubuntu1604/java/metadata/debs/metadata.yaml"
     releasePolicies:
       - tag: "default"
         # Everyday weekday at 5am.
@@ -48,6 +46,8 @@ gcsDeps:
     versionRegex: "\\d{8,}"
     fileRegex: "^ubuntu1604/java/debs/\\d{8,}_java_debs\\.tar$"
     startsWith: "ubuntu1604/java/debs/"
+    fusMetadataBucket: "layer-deps"
+    fusMetadataObject: "ubuntu1604/java/metadata/debs/metadata.yaml"
     releasePolicies:
       - tag: "default"
         # Everyday weekday at 5am.
