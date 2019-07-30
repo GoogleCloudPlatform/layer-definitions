@@ -16,7 +16,7 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 PY3_IMAGE = struct(
-    sha256 = "sha256:1a9c461f7abd431a5a80a8e18da29f12de7a8ecb95c68b735eb815aa118859d0",
+    sha256 = "sha256:355ed5190fb11f9fd771591e0e2ff1d1347ffd2e429f3f2c9e48108cacb72162",
 )
 
 DEBS_TARBALL = struct(
