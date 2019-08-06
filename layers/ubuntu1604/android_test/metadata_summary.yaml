@@ -61,13 +61,13 @@ DEBS_TARBALL:
   - name: libglapi-mesa
     version: 18.0.5-0ubuntu0~16.04.1
   - name: libglib2.0-0
-    version: 2.48.2-0ubuntu4.3
+    version: 2.48.2-0ubuntu4.4
   - name: libglib2.0-bin
-    version: 2.48.2-0ubuntu4.3
+    version: 2.48.2-0ubuntu4.4
   - name: libglib2.0-data
-    version: 2.48.2-0ubuntu4.3
+    version: 2.48.2-0ubuntu4.4
   - name: libglib2.0-dev
-    version: 2.48.2-0ubuntu4.3
+    version: 2.48.2-0ubuntu4.4
   - name: libice6
     version: 2:1.0.9-1
   - name: libjson-c2
