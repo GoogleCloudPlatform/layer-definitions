@@ -7,7 +7,7 @@ DEBS_TARBALL:
   - name: cpio
     version: 2.11+dfsg-5ubuntu1
   - name: dpkg-dev
-    version: 1.18.4ubuntu1.5
+    version: 1.18.4ubuntu1.6
   - name: gcc-5-base
     version: 5.4.0-6ubuntu1~16.04.11
   - name: gcc-6-base
@@ -25,7 +25,7 @@ DEBS_TARBALL:
   - name: libdbus-1-3
     version: 1.10.6-1ubuntu3.4
   - name: libdpkg-perl
-    version: 1.18.4ubuntu1.5
+    version: 1.18.4ubuntu1.6
   - name: libdrm-amdgpu1
     version: 2.4.91-2~16.04.1
   - name: libdrm-common
