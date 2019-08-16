@@ -1,7 +1,7 @@
 DEBS_TARBALL:
   packages:
   - name: dh-python
-    version: 2.20151103ubuntu1.1
+    version: 2.20151103ubuntu1.2
   - name: libc-dev-bin
     version: 2.23-0ubuntu11
   - name: libc6-dev
