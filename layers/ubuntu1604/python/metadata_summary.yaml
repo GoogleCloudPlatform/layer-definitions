@@ -1,7 +1,7 @@
 DEBS_TARBALL:
   packages:
   - name: dh-python
-    version: 2.20151103ubuntu1.1
+    version: 2.20151103ubuntu1.2
   - name: distro-info-data
     version: 0.28ubuntu0.12
   - name: gir1.2-glib-2.0
