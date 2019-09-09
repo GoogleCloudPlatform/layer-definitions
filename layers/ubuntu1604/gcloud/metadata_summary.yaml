@@ -5,12 +5,12 @@ DEBS_TARBALL:
   - name: libexpat1
     version: 2.1.0-7ubuntu0.16.04.4
   - name: libpython2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.4
+    version: 2.7.12-1ubuntu0~16.04.8
   - name: libpython2.7-stdlib
-    version: 2.7.12-1ubuntu0~16.04.4
+    version: 2.7.12-1ubuntu0~16.04.8
   - name: mime-support
     version: 3.59ubuntu1
   - name: python2.7
-    version: 2.7.12-1ubuntu0~16.04.4
+    version: 2.7.12-1ubuntu0~16.04.8
   - name: python2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.4
+    version: 2.7.12-1ubuntu0~16.04.8
