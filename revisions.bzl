@@ -16,6 +16,6 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 RULES_DOCKER = struct(
-    commit = "5f2a1e2d2339a12c557dfd1d0129f3ade5bce616",
-    sha256 = "15ff4e4cf129d83e17da4ac39477f4404ac9d213111638ad820056923ac61cad",
+    commit = "c3f19ac75dab69324e9e58b97227cbc51c8bdfe6",
+    sha256 = "e63394f345b2ecd71b5413292f7fa1d00902f18108f664fbc360ca9216c58337",
 )
