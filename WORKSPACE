@@ -22,17 +22,17 @@ load(
 load(":revisions.bzl", "RULES_DOCKER")
 
 http_archive(
-    name = "bazel_toolchains",
-    sha256 = "322ef052f15d61fdda3ff5c7be4b03d24e6543320b3b4b41da307aebd75b3c20",
-    strip_prefix = "bazel-toolchains-ae9c35af59cfe8af4a631550c0c8d37ff7f4e7da",
-    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/ae9c35af59cfe8af4a631550c0c8d37ff7f4e7da.tar.gz"],
-)
-
-http_archive(
     name = "io_bazel_rules_docker",
     sha256 = RULES_DOCKER.sha256,
     strip_prefix = "rules_docker-" + RULES_DOCKER.commit,
     urls = ["https://github.com/bazelbuild/rules_docker/archive/" + RULES_DOCKER.commit + ".tar.gz"],
+)
+
+http_archive(
+    name = "bazel_toolchains",
+    sha256 = "0e402919fe73e4f030fc4fb03006597025cabfe6ebc0128c16c71441dc9d1460",
+    strip_prefix = "bazel-toolchains-b2f8803700c0e40c8ec840a733e52d3bee651a1d",
+    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/b2f8803700c0e40c8ec840a733e52d3bee651a1d.tar.gz"],
 )
 
 http_archive(
@@ -83,7 +83,7 @@ load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 load("@bazel_toolchains//rules:environments.bzl", "clang_env")
 
 # Used by FUS to run the metadata rules from bazel-toolchains.
-load("@bazel_toolchains//repositories:repositories.bzl", bazel_toolchains_repos = "repositories")
+load("@bazel_toolchains//repositories:repositories.bzl", bazel_toolchains_repos = "packages_metadata_repositories")
 
 bazel_toolchains_repos()
 
@@ -93,12 +93,12 @@ bazel_toolchains_go_repos()
 
 rbe_autoconfig(
     name = "rbe_toolchain_config",
-    base_container_digest = "sha256:fbd499b53a377fe2c6c5e65c33bdecd9393871e19a64eaf785fb6491f31849d3",
+    base_container_digest = "sha256:3e98e2e1233de1aed4ed7d7e05450a3f75b8c8d6f6bf53f1b390b5131c790f6f",
     # Note that if you change the `digest`, you might also need to update the
     # `base_container_digest` to make sure asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud:<digest>
     # and marketplace.gcr.io/google/rbe-ubuntu16-04:<base_container_digest> have the
     # same Clang and JDK installed.
-    digest = "sha256:6e35c476559829b59530be8e984932279c177d91984455557bf1b66315cd7c7b",
+    digest = "sha256:c38a2be3377f6ee98b8c64deab64b597aa4a8aef1944de67b1312e9d33393e3d",
     env = clang_env(),
     registry = "gcr.io",
     repository = "asci-toolchain/nosla-ubuntu16_04-bazel-docker-gcloud",
