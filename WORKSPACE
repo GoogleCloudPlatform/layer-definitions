@@ -19,6 +19,7 @@ load(
     "http_archive",
     "http_file",
 )
+load(":revisions.bzl", "RULES_DOCKER")
 
 http_archive(
     name = "bazel_toolchains",
@@ -29,9 +30,9 @@ http_archive(
 
 http_archive(
     name = "io_bazel_rules_docker",
-    sha256 = "15ff4e4cf129d83e17da4ac39477f4404ac9d213111638ad820056923ac61cad",
-    strip_prefix = "rules_docker-5f2a1e2d2339a12c557dfd1d0129f3ade5bce616",
-    urls = ["https://github.com/bazelbuild/rules_docker/archive/5f2a1e2d2339a12c557dfd1d0129f3ade5bce616.tar.gz"],
+    sha256 = RULES_DOCKER.sha256,
+    strip_prefix = "rules_docker-" + RULES_DOCKER.commit,
+    urls = ["https://github.com/bazelbuild/rules_docker/archive/" + RULES_DOCKER.commit + ".tar.gz"],
 )
 
 http_archive(
