@@ -19,9 +19,9 @@ DEBS_TARBALL:
   - name: libdbus-glib-1-2
     version: 0.106-1
   - name: libexpat1
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libexpat1-dev
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libgirepository-1.0-1
     version: 1.46.0-3ubuntu1
   - name: libglib2.0-0
