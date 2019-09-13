@@ -7,9 +7,9 @@ DEBS_TARBALL:
   - name: libc6-dev
     version: 2.23-0ubuntu11
   - name: libexpat1
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libexpat1-dev
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libmpdec2
     version: 2.4.2-1
   - name: libpython-dev
