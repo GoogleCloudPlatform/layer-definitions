@@ -17,7 +17,7 @@ DEBS_TARBALL:
   - name: liberror-perl
     version: 0.17-1.2
   - name: libexpat1
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libgdbm3
     version: 1.8.3-13.1
   - name: libmagic1
