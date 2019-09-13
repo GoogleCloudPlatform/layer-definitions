@@ -3,7 +3,7 @@ DEBS_TARBALL:
   - name: google-cloud-sdk
     version: 262.0.0-0
   - name: libexpat1
-    version: 2.1.0-7ubuntu0.16.04.4
+    version: 2.1.0-7ubuntu0.16.04.5
   - name: libpython2.7-minimal
     version: 2.7.12-1ubuntu0~16.04.8
   - name: libpython2.7-stdlib
