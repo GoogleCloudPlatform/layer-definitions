@@ -82,15 +82,6 @@ http_file(
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 load("@bazel_toolchains//rules:environments.bzl", "clang_env")
 
-# Used by FUS to run the metadata rules from bazel-toolchains.
-load("@bazel_toolchains//repositories:repositories.bzl", bazel_toolchains_repos = "packages_metadata_repositories")
-
-bazel_toolchains_repos()
-
-load("@bazel_toolchains//repositories:go_repositories.bzl", bazel_toolchains_go_repos = "go_deps")
-
-bazel_toolchains_go_repos()
-
 rbe_autoconfig(
     name = "rbe_toolchain_config",
     base_container_digest = "sha256:3e98e2e1233de1aed4ed7d7e05450a3f75b8c8d6f6bf53f1b390b5131c790f6f",
