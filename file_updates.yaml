@@ -135,3 +135,50 @@
         target: //tests/layers/random:metadata.yaml
         bucket: dep-update-service-test
         object: layer-definitions/tests/metadata/random/metadata.yaml
+
+# ================================= Ubuntu1804 =================================
+
+# Clang debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1804/clang:clang_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1804/clang/debs
+    metadata:
+        target: //layers/ubuntu1804/clang:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1804/clang/metadata/debs/metadata.yaml
+
+# Java debian package tarball and java cacerts file generated when
+# installing `ca-certificates-java`.
+- triggerFile:
+    target: //layers/ubuntu1804/java:java_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1804/java/debs
+    metadata:
+        target: //layers/ubuntu1804/java:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1804/java/metadata/debs/metadata.yaml
+  extraFiles:
+    - target: //layers/ubuntu1804/java:cacerts_tar/cacerts.tar
+      bucket: layer-deps
+      dir: ubuntu1804/java/cacerts
+
+# Python debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1804/python:python_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1804/python/debs
+    metadata:
+        target: //layers/ubuntu1804/python:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1804/python/metadata/debs/metadata.yaml
+
+# Base RBE tools debian package tarball.
+- triggerFile:
+    target: //layers/ubuntu1804/rbe_tools:rbe_tools_debs.tar
+    bucket: layer-deps
+    dir: ubuntu1804/rbe_tools/debs
+    metadata:
+        target: //layers/ubuntu1804/rbe_tools:metadata.yaml
+        bucket: layer-deps
+        object: ubuntu1804/rbe_tools/metadata/debs/metadata.yaml

@@ -144,3 +144,29 @@ ubuntu1604_webtest_deps()
 load("//layers/ubuntu1604/android_test:deps.bzl", ubuntu1604_android_test_deps = "deps")
 
 ubuntu1604_android_test_deps()
+
+# ================================= Ubuntu1804 =================================
+
+load("//layers/ubuntu1804/base:deps.bzl", ubuntu1804_base_deps = "deps")
+
+ubuntu1804_base_deps()
+
+load("//layers/ubuntu1804/clang:deps.bzl", ubuntu1804_clang_deps = "deps")
+
+ubuntu1804_clang_deps()
+
+load("//layers/ubuntu1804/go:deps.bzl", ubuntu1804_go_deps = "deps")
+
+ubuntu1804_go_deps()
+
+load("//layers/ubuntu1804/java:deps.bzl", ubuntu1804_java_deps = "deps")
+
+ubuntu1804_java_deps()
+
+load("//layers/ubuntu1804/python:deps.bzl", ubuntu1804_python_deps = "deps")
+
+ubuntu1804_python_deps()
+
+load("//layers/ubuntu1804/rbe_tools:deps.bzl", ubuntu1804_rbe_tools_deps = "deps")
+
+ubuntu1804_rbe_tools_deps()
