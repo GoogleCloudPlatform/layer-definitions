@@ -1,0 +1,64 @@
+DEBS_TARBALL:
+  packages:
+  - name: binutils
+    version: 2.30-21ubuntu1~18.04.2
+  - name: binutils-common
+    version: 2.30-21ubuntu1~18.04.2
+  - name: binutils-x86-64-linux-gnu
+    version: 2.30-21ubuntu1~18.04.2
+  - name: ed
+    version: 1.10-2.1
+  - name: file
+    version: 1:5.32-2ubuntu0.2
+  - name: git
+    version: 1:2.17.1-1ubuntu0.4
+  - name: git-man
+    version: 1:2.17.1-1ubuntu0.4
+  - name: less
+    version: 487-0.1
+  - name: libbinutils
+    version: 2.30-21ubuntu1~18.04.2
+  - name: libbsd0
+    version: 0.8.7-1
+  - name: libcurl3-gnutls
+    version: 7.58.0-2ubuntu3.8
+  - name: libedit2
+    version: 3.1-20170329-1
+  - name: liberror-perl
+    version: 0.17025-1
+  - name: libexpat1
+    version: 2.2.5-3ubuntu0.2
+  - name: libgdbm-compat4
+    version: 1.14.1-6
+  - name: libgdbm5
+    version: 1.14.1-6
+  - name: libmagic-mgc
+    version: 1:5.32-2ubuntu0.2
+  - name: libmagic1
+    version: 1:5.32-2ubuntu0.2
+  - name: libperl5.26
+    version: 5.26.1-6ubuntu0.3
+  - name: libssl1.0.0
+    version: 1.0.2n-1ubuntu5.3
+  - name: locales
+    version: 2.27-3ubuntu1
+  - name: locales-all
+    version: 2.27-3ubuntu1
+  - name: netcat
+    version: 1.10-41.1
+  - name: netcat-traditional
+    version: 1.10-41.1
+  - name: openssh-client
+    version: 1:7.6p1-4ubuntu0.3
+  - name: patch
+    version: 2.7.6-2ubuntu1.1
+  - name: perl
+    version: 5.26.1-6ubuntu0.3
+  - name: perl-modules-5.26
+    version: 5.26.1-6ubuntu0.3
+  - name: unzip
+    version: 6.0-21ubuntu1
+  - name: wget
+    version: 1.19.4-1ubuntu2.2
+  - name: zip
+    version: 3.0-11build1
