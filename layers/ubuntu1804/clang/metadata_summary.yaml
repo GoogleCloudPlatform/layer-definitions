@@ -1,11 +1,9 @@
 DEBS_TARBALL:
   packages:
-  - name: gcc-5-base
-    version: 5.5.0-12ubuntu1
   - name: gcc-7-base
     version: 7.4.0-1ubuntu1~18.04.1
-  - name: libasan2
-    version: 5.5.0-12ubuntu1
+  - name: libasan4
+    version: 7.4.0-1ubuntu1~18.04.1
   - name: libatomic1
     version: 8.3.0-6ubuntu1~18.04.1
   - name: libc-dev-bin
@@ -14,20 +12,20 @@ DEBS_TARBALL:
     version: 2.27-3ubuntu1
   - name: libcilkrts5
     version: 7.4.0-1ubuntu1~18.04.1
-  - name: libgcc-5-dev
-    version: 5.5.0-12ubuntu1
+  - name: libgcc-7-dev
+    version: 7.4.0-1ubuntu1~18.04.1
   - name: libgomp1
     version: 8.3.0-6ubuntu1~18.04.1
   - name: libitm1
     version: 8.3.0-6ubuntu1~18.04.1
   - name: liblsan0
     version: 8.3.0-6ubuntu1~18.04.1
-  - name: libmpx0
-    version: 5.5.0-12ubuntu1
+  - name: libmpx2
+    version: 8.3.0-6ubuntu1~18.04.1
   - name: libquadmath0
     version: 8.3.0-6ubuntu1~18.04.1
-  - name: libstdc++-5-dev
-    version: 5.5.0-12ubuntu1
+  - name: libstdc++-7-dev
+    version: 7.4.0-1ubuntu1~18.04.1
   - name: libtsan0
     version: 8.3.0-6ubuntu1~18.04.1
   - name: libubsan0
