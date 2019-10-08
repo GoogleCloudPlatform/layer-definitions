@@ -1,9 +1,7 @@
 DEBS_TARBALL:
   packages:
-  - name: gcc-4.9-base
-    version: 4.9.3-13ubuntu2
-  - name: libasan1
-    version: 4.9.3-13ubuntu2
+  - name: libasan2
+    version: 5.4.0-6ubuntu1~16.04.11
   - name: libatomic1
     version: 5.4.0-6ubuntu1~16.04.11
   - name: libc-dev-bin
@@ -12,18 +10,20 @@ DEBS_TARBALL:
     version: 2.23-0ubuntu11
   - name: libcilkrts5
     version: 5.4.0-6ubuntu1~16.04.11
-  - name: libgcc-4.9-dev
-    version: 4.9.3-13ubuntu2
+  - name: libgcc-5-dev
+    version: 5.4.0-6ubuntu1~16.04.11
   - name: libgomp1
     version: 5.4.0-6ubuntu1~16.04.11
   - name: libitm1
     version: 5.4.0-6ubuntu1~16.04.11
   - name: liblsan0
     version: 5.4.0-6ubuntu1~16.04.11
+  - name: libmpx0
+    version: 5.4.0-6ubuntu1~16.04.11
   - name: libquadmath0
     version: 5.4.0-6ubuntu1~16.04.11
-  - name: libstdc++-4.9-dev
-    version: 4.9.3-13ubuntu2
+  - name: libstdc++-5-dev
+    version: 5.4.0-6ubuntu1~16.04.11
   - name: libtsan0
     version: 5.4.0-6ubuntu1~16.04.11
   - name: libubsan0
