@@ -39,7 +39,7 @@ download_pkgs(
     name = "clang_debs",
     image_tar = "@ubuntu1604//image",
     packages = [
-        "libstdc++-4.9-dev",
+        "libstdc++-5-dev",
     ],
 )
 
