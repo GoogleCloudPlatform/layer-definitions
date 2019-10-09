@@ -101,9 +101,9 @@ DEBS_TARBALL:
   - name: libpython-stdlib
     version: 2.7.12-1~16.04
   - name: libpython2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.8
+    version: 2.7.12-1ubuntu0~16.04.9
   - name: libpython2.7-stdlib
-    version: 2.7.12-1ubuntu0~16.04.8
+    version: 2.7.12-1ubuntu0~16.04.9
   - name: libsensors4
     version: 1:3.4.0-2
   - name: libsm6
@@ -185,9 +185,9 @@ DEBS_TARBALL:
   - name: python-minimal
     version: 2.7.12-1~16.04
   - name: python2.7
-    version: 2.7.12-1ubuntu0~16.04.8
+    version: 2.7.12-1ubuntu0~16.04.9
   - name: python2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.8
+    version: 2.7.12-1ubuntu0~16.04.9
   - name: x11-common
     version: 1:7.7+13ubuntu3.1
   - name: x11-xkb-utils
