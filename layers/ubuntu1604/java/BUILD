@@ -23,7 +23,7 @@ load(
     "toolchain_container",
 )
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
-load(":revisions.bzl", "OPENJDK_INSTALLER", "OPENJDK_SRC")
+load(":jdk_revisions.bzl", "OPENJDK_INSTALLER", "OPENJDK_SRC")
 
 licenses(["notice"])  # Apache 2.0
 
