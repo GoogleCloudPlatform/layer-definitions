@@ -28,18 +28,18 @@ def deps():
     if "ubuntu1804_clang_release" not in excludes:
         http_file(
             name = "ubuntu1804_clang_release",
-            downloaded_file_path = "clang_" + CLANG_INSTALLER.revision + ".tar.gz",
+            downloaded_file_path = "clang_r" + CLANG_INSTALLER.revision + ".tar.gz",
             sha256 = CLANG_INSTALLER.sha256,
-            urls = ["https://storage.googleapis.com/clang-builds-stable/clang-ubuntu18_04/clang_" + CLANG_INSTALLER.revision + ".tar.gz"],
+            urls = ["https://storage.googleapis.com/clang-builds-stable/clang-ubuntu18_04/clang_r" + CLANG_INSTALLER.revision + ".tar.gz"],
         )
 
     # libcxx
     if "ubuntu1804_libcxx_release" not in excludes:
         http_file(
             name = "ubuntu1804_libcxx_release",
-            downloaded_file_path = "libcxx-msan_" + LIBCXX_INSTALLER.revision + ".tar.gz",
+            downloaded_file_path = "libcxx-msan_r" + LIBCXX_INSTALLER.revision + ".tar.gz",
             sha256 = LIBCXX_INSTALLER.sha256,
-            urls = ["https://storage.googleapis.com/clang-builds-stable/clang-ubuntu18_04/libcxx-msan_" + LIBCXX_INSTALLER.revision + ".tar.gz"],
+            urls = ["https://storage.googleapis.com/clang-builds-stable/clang-ubuntu18_04/libcxx-msan_r" + LIBCXX_INSTALLER.revision + ".tar.gz"],
         )
 
     if "ubuntu1804_clang_debs" not in excludes:
