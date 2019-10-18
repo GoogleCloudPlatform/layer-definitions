@@ -3,7 +3,7 @@ DEBS_TARBALL:
   - name: dh-python
     version: 3.20180325ubuntu2
   - name: distro-info-data
-    version: 0.37ubuntu0.5
+    version: 0.37ubuntu0.6
   - name: gir1.2-glib-2.0
     version: 1.56.1-1
   - name: gpg
