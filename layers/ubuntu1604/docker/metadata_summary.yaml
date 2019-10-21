@@ -1,7 +1,7 @@
 DEBS_TARBALL:
   packages:
   - name: containerd.io
-    version: 1.2.10-2
+    version: 1.2.10-3
   - name: docker-ce
     version: 5:19.03.4~3-0~ubuntu-xenial
   - name: docker-ce-cli
