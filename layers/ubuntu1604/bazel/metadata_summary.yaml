@@ -5,7 +5,7 @@ DEBS_TARBALL:
   - name: binutils
     version: 2.26.1-1ubuntu1~16.04.8
   - name: file
-    version: 1:5.25-2ubuntu1.2
+    version: 1:5.25-2ubuntu1.3
   - name: git
     version: 1:2.7.4-0ubuntu1.6
   - name: git-man
@@ -21,7 +21,7 @@ DEBS_TARBALL:
   - name: libgdbm3
     version: 1.8.3-13.1
   - name: libmagic1
-    version: 1:5.25-2ubuntu1.2
+    version: 1:5.25-2ubuntu1.3
   - name: libperl5.22
     version: 5.22.1-9ubuntu0.6
   - name: openssh-client
