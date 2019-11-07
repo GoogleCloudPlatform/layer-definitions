@@ -91,11 +91,11 @@ DEBS_TARBALL:
   - name: python3-dev
     version: 3.6.7-1~18.04
   - name: python3-distutils
-    version: 3.6.8-1~18.04
+    version: 3.6.9-1~18.04
   - name: python3-gi
     version: 3.26.1-2ubuntu1
   - name: python3-lib2to3
-    version: 3.6.8-1~18.04
+    version: 3.6.9-1~18.04
   - name: python3-minimal
     version: 3.6.7-1~18.04
   - name: python3-software-properties
