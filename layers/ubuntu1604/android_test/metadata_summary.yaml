@@ -5,7 +5,7 @@ DEBS_TARBALL:
   - name: bzip2
     version: 1.0.6-8ubuntu0.2
   - name: cpio
-    version: 2.11+dfsg-5ubuntu1
+    version: 2.11+dfsg-5ubuntu1.1
   - name: dpkg-dev
     version: 1.18.4ubuntu1.6
   - name: gcc-5-base
