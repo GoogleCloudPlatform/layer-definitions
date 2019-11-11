@@ -22,7 +22,6 @@ load(
     "language_tool_layer",
 )
 load(":clang.bzl", "clang_env")
-load(":revisions.bzl", "CLANG_INSTALLER")
 
 licenses(["notice"])  # Apache 2.0
 
@@ -79,14 +78,6 @@ language_tool_layer(
         ":clang_tar",
         ":libcxx_tar",
     ],
-)
-
-# Used by tests only.
-genrule(
-    name = "generate_clang_yaml",
-    srcs = ["tests.yaml.tpl"],
-    outs = ["tests.yaml"],
-    cmd = "sed 's|{_CLANG_REVISION}|" + CLANG_INSTALLER.revision.lstrip("r") + "|' <$< >$@",
 )
 
 container_test(
