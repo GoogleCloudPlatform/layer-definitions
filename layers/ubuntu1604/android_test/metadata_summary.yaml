@@ -10,8 +10,6 @@ DEBS_TARBALL:
     version: 1.18.4ubuntu1.6
   - name: gcc-5-base
     version: 5.4.0-6ubuntu1~16.04.12
-  - name: gcc-5-base
-    version: 5.4.0-6ubuntu1~16.04.12
   - name: gcc-6-base
     version: 6.0.1-0ubuntu1
   - name: libasyncns0
@@ -112,8 +110,6 @@ DEBS_TARBALL:
     version: 2:1.2.2-1
   - name: libsndfile1
     version: 1.0.25-10ubuntu0.16.04.2
-  - name: libstdc++6
-    version: 5.4.0-6ubuntu1~16.04.12
   - name: libstdc++6
     version: 5.4.0-6ubuntu1~16.04.12
   - name: libvorbis0a
