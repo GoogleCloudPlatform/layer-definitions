@@ -20,6 +20,6 @@ PY3_IMAGE = struct(
 )
 
 DEBS_TARBALL = struct(
-    revision = "1571664698",
-    sha256 = "bafbfd4c58ab698e94835444089b0bcd2ba013aaeedb12998342bfd84e17a5d9",
+    revision = "1573605097",
+    sha256 = "e3a4c62a7d060ea5a0a430bbd1f4d0d6620c67de34bb154703bf5c9a06615edc",
 )
