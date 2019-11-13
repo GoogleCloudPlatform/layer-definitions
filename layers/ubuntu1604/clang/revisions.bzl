@@ -26,6 +26,6 @@ LIBCXX_INSTALLER = struct(
 )
 
 DEBS_TARBALL = struct(
-    revision = "1573507873",
-    sha256 = "2f116c1f63ee9945834fe8f1670c2978d348fb12356a5af834d094b04a220a4b",
+    revision = "1573612277",
+    sha256 = "1729e9e8c3fa4843150a72f495e586b74223acfde1cb1cd814b4e7fd63772df7",
 )
