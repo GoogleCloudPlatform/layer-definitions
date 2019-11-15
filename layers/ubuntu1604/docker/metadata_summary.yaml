@@ -3,9 +3,9 @@ DEBS_TARBALL:
   - name: containerd.io
     version: 1.2.10-3
   - name: docker-ce
-    version: 5:19.03.4~3-0~ubuntu-xenial
+    version: 5:19.03.5~3-0~ubuntu-xenial
   - name: docker-ce-cli
-    version: 5:19.03.4~3-0~ubuntu-xenial
+    version: 5:19.03.5~3-0~ubuntu-xenial
   - name: iptables
     version: 1.6.0-2ubuntu3
   - name: libnfnetlink0
