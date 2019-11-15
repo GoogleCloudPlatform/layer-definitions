@@ -30,17 +30,19 @@ http_archive(
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "0e402919fe73e4f030fc4fb03006597025cabfe6ebc0128c16c71441dc9d1460",
-    strip_prefix = "bazel-toolchains-b2f8803700c0e40c8ec840a733e52d3bee651a1d",
-    urls = ["https://github.com/bazelbuild/bazel-toolchains/archive/b2f8803700c0e40c8ec840a733e52d3bee651a1d.tar.gz"],
+    sha256 = "3c1299efcf64a4ecf4f6def7564db28879ad2870632144d77932e7910686d3f3",
+    strip_prefix = "bazel-toolchains-1.1.2",
+    urls = [
+        "https://github.com/bazelbuild/bazel-toolchains/releases/download/1.1.2/bazel-toolchains-1.1.2.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/1.1.2.tar.gz",
+    ],
 )
 
 http_archive(
     name = "bazel_skylib",
-    # Commit c00ef493869e2966d47508e8625aae723a4a3054 of 2018-12-10
-    sha256 = "7363ae6721c1648017e23a200013510c9e71ca69f398d52886ee6af7f26af436",
-    strip_prefix = "bazel-skylib-c00ef493869e2966d47508e8625aae723a4a3054",
-    urls = ["https://github.com/bazelbuild/bazel-skylib/archive/c00ef493869e2966d47508e8625aae723a4a3054.tar.gz"],
+    sha256 = "e5d90f0ec952883d56747b7604e2a15ee36e288bb556c3d0ed33e818a4d971f2",
+    strip_prefix = "bazel-skylib-1.0.2",
+    urls = ["https://github.com/bazelbuild/bazel-skylib/archive/1.0.2.tar.gz"],
 )
 
 load(
