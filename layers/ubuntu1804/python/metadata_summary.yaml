@@ -49,13 +49,13 @@ DEBS_TARBALL:
   - name: libpython3-stdlib
     version: 3.6.7-1~18.04
   - name: libpython3.6
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: libpython3.6-dev
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: libpython3.6-minimal
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: libpython3.6-stdlib
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
@@ -101,11 +101,11 @@ DEBS_TARBALL:
   - name: python3-software-properties
     version: 0.96.24.32.11
   - name: python3.6
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: python3.6-dev
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: python3.6-minimal
-    version: 3.6.8-1~18.04.3
+    version: 3.6.9-1~18.04
   - name: readline-common
     version: 7.0-3
   - name: software-properties-common
