@@ -23,7 +23,7 @@ DEBS_TARBALL:
   - name: libc6-dev
     version: 2.23-0ubuntu11
   - name: libdbus-1-3
-    version: 1.10.6-1ubuntu3.4
+    version: 1.10.6-1ubuntu3.5
   - name: libdpkg-perl
     version: 1.18.4ubuntu1.6
   - name: libdrm-amdgpu1
