@@ -11,9 +11,9 @@ DEBS_TARBALL:
   - name: file
     version: 1:5.32-2ubuntu0.3
   - name: git
-    version: 1:2.17.1-1ubuntu0.4
+    version: 1:2.17.1-1ubuntu0.5
   - name: git-man
-    version: 1:2.17.1-1ubuntu0.4
+    version: 1:2.17.1-1ubuntu0.5
   - name: less
     version: 487-0.1
   - name: libbinutils
