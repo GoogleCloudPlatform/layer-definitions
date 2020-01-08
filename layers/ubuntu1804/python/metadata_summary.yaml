@@ -59,7 +59,7 @@ DEBS_TARBALL:
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
-    version: 4.15.0-72.81
+    version: 4.15.0-74.84
   - name: lsb-release
     version: 9.20170808ubuntu1
   - name: mime-support
