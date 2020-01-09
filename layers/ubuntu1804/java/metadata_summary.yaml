@@ -35,7 +35,7 @@ DEBS_TARBALL:
   - name: libnspr4
     version: 2:4.18-1ubuntu1
   - name: libnss3
-    version: 2:3.35-2ubuntu2.6
+    version: 2:3.35-2ubuntu2.7
   - name: libpcsclite1
     version: 1.8.23-1
   - name: libpng16-16
