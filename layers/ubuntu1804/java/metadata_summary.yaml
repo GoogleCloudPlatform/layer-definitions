@@ -15,7 +15,7 @@ DEBS_TARBALL:
   - name: libavahi-common3
     version: 0.7-3.1ubuntu1.2
   - name: libbsd0
-    version: 0.8.7-1
+    version: 0.8.7-1ubuntu0.1
   - name: libcups2
     version: 2.2.7-1ubuntu2.7
   - name: libdbus-1-3
