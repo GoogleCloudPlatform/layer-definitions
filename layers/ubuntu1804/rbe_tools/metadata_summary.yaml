@@ -19,7 +19,7 @@ DEBS_TARBALL:
   - name: libbinutils
     version: 2.30-21ubuntu1~18.04.2
   - name: libbsd0
-    version: 0.8.7-1
+    version: 0.8.7-1ubuntu0.1
   - name: libcurl3-gnutls
     version: 7.58.0-2ubuntu3.8
   - name: libedit2
