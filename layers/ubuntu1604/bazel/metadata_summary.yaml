@@ -11,7 +11,7 @@ DEBS_TARBALL:
   - name: git-man
     version: 1:2.7.4-0ubuntu1.7
   - name: libbsd0
-    version: 0.8.2-1
+    version: 0.8.2-1ubuntu0.1
   - name: libedit2
     version: 3.1-20150325-1ubuntu2
   - name: liberror-perl
