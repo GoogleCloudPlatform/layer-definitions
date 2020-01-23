@@ -61,7 +61,7 @@ DEBS_TARBALL:
   - name: python
     version: 2.7.12-1~16.04
   - name: python-apt-common
-    version: 1.1.0~beta1ubuntu0.16.04.5
+    version: 1.1.0~beta1ubuntu0.16.04.8
   - name: python-dev
     version: 2.7.12-1~16.04
   - name: python-minimal
@@ -79,7 +79,7 @@ DEBS_TARBALL:
   - name: python3
     version: 3.5.1-3
   - name: python3-apt
-    version: 1.1.0~beta1ubuntu0.16.04.5
+    version: 1.1.0~beta1ubuntu0.16.04.8
   - name: python3-dbus
     version: 1.2.0-3
   - name: python3-dev
