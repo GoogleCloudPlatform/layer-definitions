@@ -203,6 +203,8 @@ DEBS_TARBALL:
   - name: xz-utils
     version: 5.1.1alpha+20120614-2ubuntu2
   - name: zlib1g
-    version: 1:1.2.8.dfsg-2ubuntu4.1
+    version: 1:1.2.8.dfsg-2ubuntu4.3
+  - name: zlib1g
+    version: 1:1.2.8.dfsg-2ubuntu4.3
   - name: zlib1g-dev
-    version: 1:1.2.8.dfsg-2ubuntu4.1
+    version: 1:1.2.8.dfsg-2ubuntu4.3
