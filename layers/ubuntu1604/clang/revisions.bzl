@@ -16,13 +16,13 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 CLANG_INSTALLER = struct(
-    revision = "407ac2eb5f136af5ddd213b8bcca176481ec5198",
-    sha256 = "6cff276b2b67fe42011033ff40abbf4498fa1e6619963d3e642012ef86938abb",
+    revision = "a21beccea2020f950845cbb68db663d0737e174c",
+    sha256 = "cf44c5aebfc39379eea9ae1a84c801df858bd6bf8cc6571722257556ecb00066",
 )
 
 LIBCXX_INSTALLER = struct(
-    revision = "407ac2eb5f136af5ddd213b8bcca176481ec5198",
-    sha256 = "ff9367e11db111c510070f133dcb6e5cab4c231b38f0068d000c4cadc1669e09",
+    revision = "a21beccea2020f950845cbb68db663d0737e174c",
+    sha256 = "4dc01274ed900cfd2e5f6bcc961ce58b28815276d7ba1426d16cc99084ec404d",
 )
 
 DEBS_TARBALL = struct(
