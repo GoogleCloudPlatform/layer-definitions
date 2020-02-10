@@ -237,7 +237,7 @@ DEBS_TARBALL:
   - name: libxkbcommon0
     version: 0.5.0-1ubuntu2.1
   - name: libxml2
-    version: 2.9.3+dfsg1-1ubuntu0.6
+    version: 2.9.3+dfsg1-1ubuntu0.7
   - name: libxrandr2
     version: 2:1.5.0-1
   - name: libxrender1
