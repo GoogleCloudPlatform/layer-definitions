@@ -44,6 +44,8 @@ download_pkgs(
         "cpio",
         "libpulse-dev",
         "libstdc++6:i386",
+        "libxcomposite1",
+        "libxcursor1",
         "lsof",
         "xvfb",
         "zlib1g:i386",
