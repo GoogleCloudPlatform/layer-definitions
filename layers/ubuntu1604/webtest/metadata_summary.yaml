@@ -121,7 +121,7 @@ DEBS_TARBALL:
   - name: libice6
     version: 2:1.0.9-1
   - name: libicu55
-    version: 55.1-7ubuntu0.4
+    version: 55.1-7ubuntu0.5
   - name: libjbig0
     version: 2.1-3.1
   - name: libjpeg-turbo8
