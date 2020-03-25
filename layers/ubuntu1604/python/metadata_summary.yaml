@@ -25,7 +25,7 @@ DEBS_TARBALL:
   - name: libgirepository-1.0-1
     version: 1.46.0-3ubuntu1
   - name: libglib2.0-0
-    version: 2.48.2-0ubuntu4.4
+    version: 2.48.2-0ubuntu4.6
   - name: libmpdec2
     version: 2.4.2-1
   - name: libpython-dev
