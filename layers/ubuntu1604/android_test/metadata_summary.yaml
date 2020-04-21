@@ -70,8 +70,6 @@ DEBS_TARBALL:
     version: 2.48.2-0ubuntu4.6
   - name: libice6
     version: 2:1.0.9-1
-  - name: libjson-c2
-    version: 0.11-4ubuntu2
   - name: libllvm6.0
     version: 1:6.0-1ubuntu2~16.04.1
   - name: libogg0
@@ -93,17 +91,17 @@ DEBS_TARBALL:
   - name: libpng12-0
     version: 1.2.54-1ubuntu1.1
   - name: libpulse-dev
-    version: 1:8.0-0ubuntu3.10
+    version: 1:8.0-0ubuntu3.11
   - name: libpulse-mainloop-glib0
-    version: 1:8.0-0ubuntu3.10
+    version: 1:8.0-0ubuntu3.11
   - name: libpulse0
-    version: 1:8.0-0ubuntu3.10
+    version: 1:8.0-0ubuntu3.11
   - name: libpython-stdlib
     version: 2.7.12-1~16.04
   - name: libpython2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.9
+    version: 2.7.12-1ubuntu0~16.04.11
   - name: libpython2.7-stdlib
-    version: 2.7.12-1ubuntu0~16.04.9
+    version: 2.7.12-1ubuntu0~16.04.11
   - name: libsensors4
     version: 1:3.4.0-2
   - name: libsm6
@@ -191,9 +189,9 @@ DEBS_TARBALL:
   - name: python-minimal
     version: 2.7.12-1~16.04
   - name: python2.7
-    version: 2.7.12-1ubuntu0~16.04.9
+    version: 2.7.12-1ubuntu0~16.04.11
   - name: python2.7-minimal
-    version: 2.7.12-1ubuntu0~16.04.9
+    version: 2.7.12-1ubuntu0~16.04.11
   - name: x11-common
     version: 1:7.7+13ubuntu3.1
   - name: x11-xkb-utils
