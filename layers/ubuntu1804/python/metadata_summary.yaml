@@ -3,7 +3,7 @@ DEBS_TARBALL:
   - name: dh-python
     version: 3.20180325ubuntu2
   - name: distro-info-data
-    version: 0.37ubuntu0.6
+    version: 0.37ubuntu0.7
   - name: gir1.2-glib-2.0
     version: 1.56.1-1
   - name: gpg
@@ -59,7 +59,7 @@ DEBS_TARBALL:
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
-    version: 4.15.0-96.97
+    version: 4.15.0-99.100
   - name: lsb-release
     version: 9.20170808ubuntu1
   - name: mime-support
