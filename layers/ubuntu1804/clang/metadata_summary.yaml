@@ -2,8 +2,6 @@ DEBS_TARBALL:
   packages:
   - name: gcc-7-base
     version: 7.5.0-3ubuntu1~18.04
-  - name: gcc-8-base
-    version: 8.4.0-1ubuntu1~18.04
   - name: libasan4
     version: 7.5.0-3ubuntu1~18.04
   - name: libatomic1
@@ -16,8 +14,6 @@ DEBS_TARBALL:
     version: 7.5.0-3ubuntu1~18.04
   - name: libgcc-7-dev
     version: 7.5.0-3ubuntu1~18.04
-  - name: libgcc1
-    version: 1:8.4.0-1ubuntu1~18.04
   - name: libgomp1
     version: 8.4.0-1ubuntu1~18.04
   - name: libitm1
@@ -30,8 +26,6 @@ DEBS_TARBALL:
     version: 8.4.0-1ubuntu1~18.04
   - name: libstdc++-7-dev
     version: 7.5.0-3ubuntu1~18.04
-  - name: libstdc++6
-    version: 8.4.0-1ubuntu1~18.04
   - name: libtsan0
     version: 8.4.0-1ubuntu1~18.04
   - name: libubsan0
