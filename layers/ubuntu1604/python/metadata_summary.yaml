@@ -9,7 +9,7 @@ DEBS_TARBALL:
   - name: iso-codes
     version: 3.65-1
   - name: libapt-inst2.0
-    version: 1.2.32
+    version: 1.2.32ubuntu0.1
   - name: libc-dev-bin
     version: 2.23-0ubuntu11
   - name: libc6-dev
