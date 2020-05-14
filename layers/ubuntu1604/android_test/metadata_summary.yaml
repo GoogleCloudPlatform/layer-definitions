@@ -91,11 +91,11 @@ DEBS_TARBALL:
   - name: libpng12-0
     version: 1.2.54-1ubuntu1.1
   - name: libpulse-dev
-    version: 1:8.0-0ubuntu3.11
+    version: 1:8.0-0ubuntu3.12
   - name: libpulse-mainloop-glib0
-    version: 1:8.0-0ubuntu3.11
+    version: 1:8.0-0ubuntu3.12
   - name: libpulse0
-    version: 1:8.0-0ubuntu3.11
+    version: 1:8.0-0ubuntu3.12
   - name: libpython-stdlib
     version: 2.7.12-1~16.04
   - name: libpython2.7-minimal
@@ -169,7 +169,7 @@ DEBS_TARBALL:
   - name: libxxf86vm1
     version: 1:1.1.4-1
   - name: linux-libc-dev
-    version: 4.4.0-177.207
+    version: 4.4.0-178.208
   - name: lsof
     version: 4.89+dfsg-0.1
   - name: make
