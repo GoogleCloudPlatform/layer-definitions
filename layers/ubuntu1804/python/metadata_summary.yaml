@@ -99,7 +99,7 @@ DEBS_TARBALL:
   - name: python3-minimal
     version: 3.6.7-1~18.04
   - name: python3-software-properties
-    version: 0.96.24.32.12
+    version: 0.96.24.32.13
   - name: python3.6
     version: 3.6.9-1~18.04ubuntu1
   - name: python3.6-dev
@@ -109,4 +109,4 @@ DEBS_TARBALL:
   - name: readline-common
     version: 7.0-3
   - name: software-properties-common
-    version: 0.96.24.32.12
+    version: 0.96.24.32.13
