@@ -25,7 +25,7 @@ DEBS_TARBALL:
   - name: libfreetype6
     version: 2.6.1-0.1ubuntu2.4
   - name: libjpeg-turbo8
-    version: 1.4.2-0ubuntu3.3
+    version: 1.4.2-0ubuntu3.4
   - name: libjpeg8
     version: 8c-2ubuntu8
   - name: liblcms2-2
