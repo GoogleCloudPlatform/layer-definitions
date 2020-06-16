@@ -6,8 +6,6 @@ DEBS_TARBALL:
     version: 2.30-21ubuntu1~18.04.3
   - name: binutils-x86-64-linux-gnu
     version: 2.30-21ubuntu1~18.04.3
-  - name: ca-certificates
-    version: 20190110~18.04.1
   - name: ed
     version: 1.10-2.1
   - name: file
