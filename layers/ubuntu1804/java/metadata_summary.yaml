@@ -19,7 +19,7 @@ DEBS_TARBALL:
   - name: libcups2
     version: 2.2.7-1ubuntu2.8
   - name: libdbus-1-3
-    version: 1.12.2-1ubuntu1.1
+    version: 1.12.2-1ubuntu1.2
   - name: libexpat1
     version: 2.2.5-3ubuntu0.2
   - name: libfontconfig1
@@ -35,7 +35,7 @@ DEBS_TARBALL:
   - name: libnspr4
     version: 2:4.18-1ubuntu1
   - name: libnss3
-    version: 2:3.35-2ubuntu2.7
+    version: 2:3.35-2ubuntu2.8
   - name: libpcsclite1
     version: 1.8.23-1
   - name: libpng16-16
