@@ -65,7 +65,7 @@ DEBS_TARBALL:
   - name: libdatrie1
     version: 0.2.10-2
   - name: libdbus-1-3
-    version: 1.10.6-1ubuntu3.5
+    version: 1.10.6-1ubuntu3.6
   - name: libdbus-glib-1-2
     version: 0.106-1
   - name: libdconf1
@@ -147,9 +147,9 @@ DEBS_TARBALL:
   - name: libnspr4
     version: 2:4.13.1-0ubuntu0.16.04.1
   - name: libnss3
-    version: 2:3.28.4-0ubuntu0.16.04.10
+    version: 2:3.28.4-0ubuntu0.16.04.11
   - name: libnss3-nssdb
-    version: 2:3.28.4-0ubuntu0.16.04.10
+    version: 2:3.28.4-0ubuntu0.16.04.11
   - name: libpango-1.0-0
     version: 1.38.1-1
   - name: libpangocairo-1.0-0
