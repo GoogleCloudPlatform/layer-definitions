@@ -39,6 +39,10 @@ commandTests:
   command: 'git'
   args: ['--version']
   expectedOutput: ['git version .*']
+- name: 'check-make'
+  command: 'make'
+  args: ['--version']
+  expectedOutput: ['GNU Make .*']
 - name: 'check-wget'
   command: 'wget'
   args: ['--version']
