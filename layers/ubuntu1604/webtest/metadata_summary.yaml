@@ -15,11 +15,11 @@ DEBS_TARBALL:
   - name: fonts-dejavu-core
     version: 2.35-1
   - name: glib-networking
-    version: 2.48.2-1~ubuntu16.04.1
+    version: 2.48.2-1~ubuntu16.04.2
   - name: glib-networking-common
-    version: 2.48.2-1~ubuntu16.04.1
+    version: 2.48.2-1~ubuntu16.04.2
   - name: glib-networking-services
-    version: 2.48.2-1~ubuntu16.04.1
+    version: 2.48.2-1~ubuntu16.04.2
   - name: gsettings-desktop-schemas
     version: 3.18.1-1ubuntu1
   - name: hicolor-icon-theme
