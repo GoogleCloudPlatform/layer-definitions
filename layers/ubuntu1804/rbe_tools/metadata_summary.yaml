@@ -45,9 +45,9 @@ DEBS_TARBALL:
   - name: libssl1.0.0
     version: 1.0.2n-1ubuntu5.3
   - name: locales
-    version: 2.27-3ubuntu1
+    version: 2.27-3ubuntu1.2
   - name: locales-all
-    version: 2.27-3ubuntu1
+    version: 2.27-3ubuntu1.2
   - name: netcat
     version: 1.10-41.1
   - name: netcat-traditional
