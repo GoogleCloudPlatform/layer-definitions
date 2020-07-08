@@ -7,9 +7,11 @@ DEBS_TARBALL:
   - name: libatomic1
     version: 8.4.0-1ubuntu1~18.04
   - name: libc-dev-bin
-    version: 2.27-3ubuntu1
+    version: 2.27-3ubuntu1.2
+  - name: libc6
+    version: 2.27-3ubuntu1.2
   - name: libc6-dev
-    version: 2.27-3ubuntu1
+    version: 2.27-3ubuntu1.2
   - name: libcilkrts5
     version: 7.5.0-3ubuntu1~18.04
   - name: libgcc-7-dev
