@@ -61,9 +61,9 @@ DEBS_TARBALL:
   - name: multiarch-support
     version: 2.27-3ubuntu1.2
   - name: openjdk-8-jdk-headless
-    version: 8u252-b09-1~18.04
+    version: 8u265-b01-0ubuntu2~18.04
   - name: openjdk-8-jre-headless
-    version: 8u252-b09-1~18.04
+    version: 8u265-b01-0ubuntu2~18.04
   - name: ucf
     version: "3.0038"
   - name: x11-common
