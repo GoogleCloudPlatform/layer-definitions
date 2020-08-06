@@ -1,11 +1,11 @@
 DEBS_TARBALL:
   packages:
   - name: binutils
-    version: 2.30-21ubuntu1~18.04.3
+    version: 2.30-21ubuntu1~18.04.4
   - name: binutils-common
-    version: 2.30-21ubuntu1~18.04.3
+    version: 2.30-21ubuntu1~18.04.4
   - name: binutils-x86-64-linux-gnu
-    version: 2.30-21ubuntu1~18.04.3
+    version: 2.30-21ubuntu1~18.04.4
   - name: ed
     version: 1.10-2.1
   - name: file
@@ -17,7 +17,7 @@ DEBS_TARBALL:
   - name: less
     version: 487-0.1
   - name: libbinutils
-    version: 2.30-21ubuntu1~18.04.3
+    version: 2.30-21ubuntu1~18.04.4
   - name: libbsd0
     version: 0.8.7-1ubuntu0.1
   - name: libcurl3-gnutls
