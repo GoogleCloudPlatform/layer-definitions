@@ -93,7 +93,7 @@ DEBS_TARBALL:
   - name: python3-pycurl
     version: 7.43.0-1ubuntu1
   - name: python3-software-properties
-    version: 0.96.20.9
+    version: 0.96.20.10
   - name: python3.5
     version: 3.5.2-2ubuntu0~16.04.11
   - name: python3.5-dev
@@ -101,4 +101,4 @@ DEBS_TARBALL:
   - name: python3.5-minimal
     version: 3.5.2-2ubuntu0~16.04.11
   - name: software-properties-common
-    version: 0.96.20.9
+    version: 0.96.20.10
