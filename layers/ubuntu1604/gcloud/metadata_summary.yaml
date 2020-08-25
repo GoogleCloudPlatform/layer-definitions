@@ -3,7 +3,7 @@ DEBS_TARBALL:
   - name: dh-python
     version: 2.20151103ubuntu1.2
   - name: google-cloud-sdk
-    version: 306.0.0-0
+    version: 307.0.0-0
   - name: libexpat1
     version: 2.1.0-7ubuntu0.16.04.5
   - name: libmpdec2
