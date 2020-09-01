@@ -38,7 +38,7 @@ download_pkgs(
     packages = [
         "python-dev",
         "python-setuptools",
-        "python3-dev",
+        "python3.7-dev",
         "software-properties-common",
     ],
 )
