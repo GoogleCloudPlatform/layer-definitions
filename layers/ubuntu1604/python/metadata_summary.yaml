@@ -55,7 +55,7 @@ DEBS_TARBALL:
   - name: libpython3.5-stdlib
     version: 3.5.2-2ubuntu0~16.04.11
   - name: linux-libc-dev
-    version: 4.4.0-187.217
+    version: 4.4.0-189.219
   - name: lsb-release
     version: 9.20160110ubuntu0.2
   - name: mime-support
