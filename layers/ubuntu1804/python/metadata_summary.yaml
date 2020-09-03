@@ -1,7 +1,5 @@
 DEBS_TARBALL:
   packages:
-  - name: dh-python
-    version: 3.20180325ubuntu2
   - name: distro-info-data
     version: 0.37ubuntu0.7
   - name: gir1.2-glib-2.0
@@ -46,22 +44,24 @@ DEBS_TARBALL:
     version: 2.7.17-1~18.04ubuntu1.1
   - name: libpython2.7-stdlib
     version: 2.7.17-1~18.04ubuntu1.1
-  - name: libpython3-dev
-    version: 3.6.7-1~18.04
   - name: libpython3-stdlib
     version: 3.6.7-1~18.04
-  - name: libpython3.6
-    version: 3.6.9-1~18.04ubuntu1.1
-  - name: libpython3.6-dev
-    version: 3.6.9-1~18.04ubuntu1.1
   - name: libpython3.6-minimal
     version: 3.6.9-1~18.04ubuntu1.1
   - name: libpython3.6-stdlib
     version: 3.6.9-1~18.04ubuntu1.1
+  - name: libpython3.7
+    version: 3.7.5-2~18.04
+  - name: libpython3.7-dev
+    version: 3.7.5-2~18.04
+  - name: libpython3.7-minimal
+    version: 3.7.5-2~18.04
+  - name: libpython3.7-stdlib
+    version: 3.7.5-2~18.04
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
-    version: 4.15.0-112.113
+    version: 4.15.0-115.116
   - name: lsb-release
     version: 9.20170808ubuntu1
   - name: mime-support
@@ -90,25 +90,25 @@ DEBS_TARBALL:
     version: 1.6.5ubuntu0.3
   - name: python3-dbus
     version: 1.2.6-1
-  - name: python3-dev
-    version: 3.6.7-1~18.04
-  - name: python3-distutils
-    version: 3.6.9-1~18.04
   - name: python3-gi
     version: 3.26.1-2ubuntu1
-  - name: python3-lib2to3
-    version: 3.6.9-1~18.04
   - name: python3-minimal
     version: 3.6.7-1~18.04
   - name: python3-software-properties
     version: 0.96.24.32.14
   - name: python3.6
     version: 3.6.9-1~18.04ubuntu1.1
-  - name: python3.6-dev
-    version: 3.6.9-1~18.04ubuntu1.1
   - name: python3.6-minimal
     version: 3.6.9-1~18.04ubuntu1.1
+  - name: python3.7
+    version: 3.7.5-2~18.04
+  - name: python3.7-dev
+    version: 3.7.5-2~18.04
+  - name: python3.7-minimal
+    version: 3.7.5-2~18.04
   - name: readline-common
     version: 7.0-3
   - name: software-properties-common
     version: 0.96.24.32.14
+  - name: zlib1g-dev
+    version: 1:1.2.11.dfsg-0ubuntu2
