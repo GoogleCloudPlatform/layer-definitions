@@ -119,11 +119,11 @@ DEBS_TARBALL:
   - name: libwrap0
     version: 7.6.q-25
   - name: libx11-6
-    version: 2:1.6.3-1ubuntu2.1
+    version: 2:1.6.3-1ubuntu2.2
   - name: libx11-data
-    version: 2:1.6.3-1ubuntu2.1
+    version: 2:1.6.3-1ubuntu2.2
   - name: libx11-xcb1
-    version: 2:1.6.3-1ubuntu2.1
+    version: 2:1.6.3-1ubuntu2.2
   - name: libxau6
     version: 1:1.0.8-1
   - name: libxaw7
@@ -171,7 +171,7 @@ DEBS_TARBALL:
   - name: libxxf86vm1
     version: 1:1.1.4-1
   - name: linux-libc-dev
-    version: 4.4.0-187.217
+    version: 4.4.0-189.219
   - name: lsof
     version: 4.89+dfsg-0.1
   - name: make
@@ -203,9 +203,9 @@ DEBS_TARBALL:
   - name: xkb-data
     version: 2.16-1ubuntu1
   - name: xserver-common
-    version: 2:1.18.4-0ubuntu0.8
+    version: 2:1.18.4-0ubuntu0.9
   - name: xvfb
-    version: 2:1.18.4-0ubuntu0.8
+    version: 2:1.18.4-0ubuntu0.9
   - name: xz-utils
     version: 5.1.1alpha+20120614-2ubuntu2
   - name: zlib1g
