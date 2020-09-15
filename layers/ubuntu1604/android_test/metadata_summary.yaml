@@ -203,9 +203,9 @@ DEBS_TARBALL:
   - name: xkb-data
     version: 2.16-1ubuntu1
   - name: xserver-common
-    version: 2:1.18.4-0ubuntu0.9
+    version: 2:1.18.4-0ubuntu0.10
   - name: xvfb
-    version: 2:1.18.4-0ubuntu0.9
+    version: 2:1.18.4-0ubuntu0.10
   - name: xz-utils
     version: 5.1.1alpha+20120614-2ubuntu2
   - name: zlib1g
