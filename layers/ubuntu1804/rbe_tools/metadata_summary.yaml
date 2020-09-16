@@ -43,7 +43,7 @@ DEBS_TARBALL:
   - name: libperl5.26
     version: 5.26.1-6ubuntu0.3
   - name: libssl1.0.0
-    version: 1.0.2n-1ubuntu5.3
+    version: 1.0.2n-1ubuntu5.4
   - name: locales
     version: 2.27-3ubuntu1.2
   - name: locales-all
