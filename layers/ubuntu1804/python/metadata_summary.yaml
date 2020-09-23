@@ -5,9 +5,9 @@ DEBS_TARBALL:
   - name: gir1.2-glib-2.0
     version: 1.56.1-1
   - name: gpg
-    version: 2.2.4-1ubuntu1.2
+    version: 2.2.4-1ubuntu1.3
   - name: gpgconf
-    version: 2.2.4-1ubuntu1.2
+    version: 2.2.4-1ubuntu1.3
   - name: iso-codes
     version: 3.79-1
   - name: libapt-inst2.0
@@ -61,7 +61,7 @@ DEBS_TARBALL:
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
-    version: 4.15.0-117.118
+    version: 4.15.0-118.119
   - name: lsb-release
     version: 9.20170808ubuntu1
   - name: mime-support
