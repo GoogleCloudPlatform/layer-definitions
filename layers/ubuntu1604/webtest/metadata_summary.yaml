@@ -165,7 +165,7 @@ DEBS_TARBALL:
   - name: libprotobuf-lite9v5
     version: 2.6.1-1.3
   - name: libproxy1v5
-    version: 0.4.11-5ubuntu1
+    version: 0.4.11-5ubuntu1.1
   - name: librest-0.7-0
     version: 0.7.93-1
   - name: librsvg2-2
