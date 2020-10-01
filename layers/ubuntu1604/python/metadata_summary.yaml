@@ -12,8 +12,6 @@ DEBS_TARBALL:
     version: 1.2.32ubuntu0.1
   - name: libc-dev-bin
     version: 2.23-0ubuntu11.2
-  - name: libc6
-    version: 2.23-0ubuntu11.2
   - name: libc6-dev
     version: 2.23-0ubuntu11.2
   - name: libdbus-1-3
