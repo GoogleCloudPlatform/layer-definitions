@@ -16,6 +16,6 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 DEBS_TARBALL = struct(
-    revision = "1600698726",
-    sha256 = "6752be59fff3866499fcf2d44065b5ec7a449425255b2b8adc666455144c182e",
+    revision = "1601400714",
+    sha256 = "70699ab3ed5822473b2e6ae6a9f04bcf00c7f081a4844d2cee6204584204d766",
 )
