@@ -3,7 +3,7 @@ DEBS_TARBALL:
   - name: dh-python
     version: 2.20151103ubuntu1.2
   - name: google-cloud-sdk
-    version: 313.0.1-0
+    version: 314.0.0-0
   - name: libexpat1
     version: 2.1.0-7ubuntu0.16.04.5
   - name: libmpdec2
@@ -11,9 +11,9 @@ DEBS_TARBALL:
   - name: libpython3-stdlib
     version: 3.5.1-3
   - name: libpython3.5-minimal
-    version: 3.5.2-2ubuntu0~16.04.11
+    version: 3.5.2-2ubuntu0~16.04.12
   - name: libpython3.5-stdlib
-    version: 3.5.2-2ubuntu0~16.04.11
+    version: 3.5.2-2ubuntu0~16.04.12
   - name: mime-support
     version: 3.59ubuntu1
   - name: python3
@@ -21,6 +21,6 @@ DEBS_TARBALL:
   - name: python3-minimal
     version: 3.5.1-3
   - name: python3.5
-    version: 3.5.2-2ubuntu0~16.04.11
+    version: 3.5.2-2ubuntu0~16.04.12
   - name: python3.5-minimal
-    version: 3.5.2-2ubuntu0~16.04.11
+    version: 3.5.2-2ubuntu0~16.04.12
