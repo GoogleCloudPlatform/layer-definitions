@@ -35,19 +35,19 @@ DEBS_TARBALL:
   - name: libpython-stdlib
     version: 2.7.15~rc1-1
   - name: libpython2.7
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: libpython2.7-dev
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: libpython2.7-minimal
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: libpython2.7-stdlib
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: libpython3-stdlib
     version: 3.6.7-1~18.04
   - name: libpython3.6-minimal
-    version: 3.6.9-1~18.04ubuntu1.1
+    version: 3.6.9-1~18.04ubuntu1.3
   - name: libpython3.6-stdlib
-    version: 3.6.9-1~18.04ubuntu1.1
+    version: 3.6.9-1~18.04ubuntu1.3
   - name: libpython3.7
     version: 3.7.5-2~18.04
   - name: libpython3.7-dev
@@ -77,11 +77,11 @@ DEBS_TARBALL:
   - name: python-setuptools
     version: 39.0.1-2
   - name: python2.7
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: python2.7-dev
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: python2.7-minimal
-    version: 2.7.17-1~18.04ubuntu1.1
+    version: 2.7.17-1~18.04ubuntu1.2
   - name: python3
     version: 3.6.7-1~18.04
   - name: python3-apt
@@ -95,9 +95,9 @@ DEBS_TARBALL:
   - name: python3-software-properties
     version: 0.96.24.32.14
   - name: python3.6
-    version: 3.6.9-1~18.04ubuntu1.1
+    version: 3.6.9-1~18.04ubuntu1.3
   - name: python3.6-minimal
-    version: 3.6.9-1~18.04ubuntu1.1
+    version: 3.6.9-1~18.04ubuntu1.3
   - name: python3.7
     version: 3.7.5-2~18.04
   - name: python3.7-dev
