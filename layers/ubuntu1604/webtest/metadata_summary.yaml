@@ -95,7 +95,7 @@ DEBS_TARBALL:
   - name: libfontconfig1
     version: 2.11.94-0ubuntu1.1
   - name: libfreetype6
-    version: 2.6.1-0.1ubuntu2.4
+    version: 2.6.1-0.1ubuntu2.5
   - name: libgbm1
     version: 18.0.5-0ubuntu0~16.04.1
   - name: libgdk-pixbuf2.0-0
