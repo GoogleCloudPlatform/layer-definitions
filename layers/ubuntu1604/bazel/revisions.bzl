@@ -16,8 +16,8 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 BAZEL_INSTALLER = struct(
-    revision = "3.6.0",
-    sha256 = "74818248b8c643da013f3e76c9fdc81c37dd4aceedcc7c55d2ba52ff6044379c",
+    revision = "3.7.0",
+    sha256 = "621089dc4d396612603a55f18f55acded29d9b21534ebaa99406a0b4b05029fb",
 )
 
 DEBS_TARBALL = struct(
