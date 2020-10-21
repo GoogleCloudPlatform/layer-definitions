@@ -31,4 +31,4 @@ DEBS_TARBALL:
   - name: libubsan0
     version: 7.5.0-3ubuntu1~18.04
   - name: linux-libc-dev
-    version: 4.15.0-118.119
+    version: 4.15.0-122.124
