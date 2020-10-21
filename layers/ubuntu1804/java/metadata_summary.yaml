@@ -25,7 +25,7 @@ DEBS_TARBALL:
   - name: libfontconfig1
     version: 2.12.6-0ubuntu2
   - name: libfreetype6
-    version: 2.8.1-2ubuntu2
+    version: 2.8.1-2ubuntu2.1
   - name: libjpeg-turbo8
     version: 1.5.2-0ubuntu5.18.04.4
   - name: libjpeg8
