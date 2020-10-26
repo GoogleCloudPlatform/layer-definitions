@@ -37,7 +37,7 @@ DEBS_TARBALL:
   - name: libmagic1
     version: 1:5.32-2ubuntu0.4
   - name: libperl5.26
-    version: 5.26.1-6ubuntu0.3
+    version: 5.26.1-6ubuntu0.5
   - name: libssl1.0.0
     version: 1.0.2n-1ubuntu5.4
   - name: locales
@@ -53,9 +53,11 @@ DEBS_TARBALL:
   - name: patch
     version: 2.7.6-2ubuntu1.1
   - name: perl
-    version: 5.26.1-6ubuntu0.3
+    version: 5.26.1-6ubuntu0.5
+  - name: perl-base
+    version: 5.26.1-6ubuntu0.5
   - name: perl-modules-5.26
-    version: 5.26.1-6ubuntu0.3
+    version: 5.26.1-6ubuntu0.5
   - name: unzip
     version: 6.0-21ubuntu1
   - name: wget
