@@ -1,7 +1,7 @@
 DEBS_TARBALL:
   packages:
   - name: distro-info-data
-    version: 0.37ubuntu0.8
+    version: 0.37ubuntu0.9
   - name: gir1.2-glib-2.0
     version: 1.56.1-1
   - name: gpg
@@ -15,9 +15,11 @@ DEBS_TARBALL:
   - name: libassuan0
     version: 2.5.1-2
   - name: libc-dev-bin
-    version: 2.27-3ubuntu1.2
+    version: 2.27-3ubuntu1.3
+  - name: libc6
+    version: 2.27-3ubuntu1.3
   - name: libc6-dev
-    version: 2.27-3ubuntu1.2
+    version: 2.27-3ubuntu1.3
   - name: libdbus-1-3
     version: 1.12.2-1ubuntu1.2
   - name: libexpat1
