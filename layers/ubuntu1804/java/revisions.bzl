@@ -16,11 +16,11 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 DEBS_TARBALL = struct(
-    revision = "1603848702",
-    sha256 = "d47c469e9bf21b9ebc321996ac73843e0ed361b4eb2f7225a9a2984a97730023",
+    revision = "1604349209",
+    sha256 = "44b4d1506ac430303d7447e6f7c260a1043d56220bab83027dd835413b572bc2",
 )
 
 CACERTS = struct(
-    revision = "1603848702",
-    sha256 = "e34438bc08e285230e0b146fb0366018b3db4adb47e8a78928f58c5992b93112",
+    revision = "1604349209",
+    sha256 = "a4729e33b95e55579a3dbd46edbeeddb01c06433c22ba3aa1b1c74e3a7b135e6",
 )
