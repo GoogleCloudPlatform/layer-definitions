@@ -16,5 +16,5 @@
 # For more details, check the deps_spec.yaml file in the current folder.
 
 IMAGE = struct(
-    sha256 = "sha256:0f91798fc7ae67099a674bc3c5494ab0f04eb4362c6c77b3b1fc8446eb21ff31",
+    sha256 = "sha256:4df05108f94a222ccee88c7949c5ffc2bd153531feedfc5fd79b3eb7ae5f0f91",
 )
