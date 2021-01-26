@@ -11,15 +11,15 @@ DEBS_TARBALL:
   - name: iso-codes
     version: 3.79-1
   - name: libapt-inst2.0
-    version: 1.6.12ubuntu0.1
+    version: 1.6.12ubuntu0.2
   - name: libassuan0
     version: 2.5.1-2
   - name: libc-dev-bin
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: libc6
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: libc6-dev
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: libdbus-1-3
     version: 1.12.2-1ubuntu1.2
   - name: libexpat1
@@ -61,7 +61,7 @@ DEBS_TARBALL:
   - name: libreadline7
     version: 7.0-3
   - name: linux-libc-dev
-    version: 4.15.0-124.127
+    version: 4.15.0-135.139
   - name: lsb-release
     version: 9.20170808ubuntu1
   - name: mime-support
@@ -69,7 +69,7 @@ DEBS_TARBALL:
   - name: python
     version: 2.7.15~rc1-1
   - name: python-apt-common
-    version: 1.6.5ubuntu0.3
+    version: 1.6.5ubuntu0.5
   - name: python-dev
     version: 2.7.15~rc1-1
   - name: python-minimal
@@ -87,7 +87,7 @@ DEBS_TARBALL:
   - name: python3
     version: 3.6.7-1~18.04
   - name: python3-apt
-    version: 1.6.5ubuntu0.3
+    version: 1.6.5ubuntu0.5
   - name: python3-dbus
     version: 1.2.6-1
   - name: python3-gi
