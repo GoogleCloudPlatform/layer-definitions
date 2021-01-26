@@ -107,7 +107,7 @@ DEBS_TARBALL:
   - name: libsm6
     version: 2:1.2.2-1
   - name: libsndfile1
-    version: 1.0.25-10ubuntu0.16.04.2
+    version: 1.0.25-10ubuntu0.16.04.3
   - name: libstdc++6
     version: 5.4.0-6ubuntu1~16.04.12
   - name: libvorbis0a
@@ -169,7 +169,7 @@ DEBS_TARBALL:
   - name: libxxf86vm1
     version: 1:1.1.4-1
   - name: linux-libc-dev
-    version: 4.4.0-194.226
+    version: 4.4.0-201.233
   - name: lsof
     version: 4.89+dfsg-0.1
   - name: make
@@ -179,8 +179,6 @@ DEBS_TARBALL:
   - name: patch
     version: 2.7.5-1ubuntu0.16.04.2
   - name: perl
-    version: 5.22.1-9ubuntu0.9
-  - name: perl-base
     version: 5.22.1-9ubuntu0.9
   - name: perl-modules-5.22
     version: 5.22.1-9ubuntu0.9
@@ -203,9 +201,9 @@ DEBS_TARBALL:
   - name: xkb-data
     version: 2.16-1ubuntu1
   - name: xserver-common
-    version: 2:1.18.4-0ubuntu0.10
+    version: 2:1.18.4-0ubuntu0.11
   - name: xvfb
-    version: 2:1.18.4-0ubuntu0.10
+    version: 2:1.18.4-0ubuntu0.11
   - name: xz-utils
     version: 5.1.1alpha+20120614-2ubuntu2
   - name: zlib1g
