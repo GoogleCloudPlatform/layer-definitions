@@ -9,7 +9,7 @@ DEBS_TARBALL:
   - name: iso-codes
     version: 3.65-1
   - name: libapt-inst2.0
-    version: 1.2.32ubuntu0.1
+    version: 1.2.32ubuntu0.2
   - name: libc-dev-bin
     version: 2.23-0ubuntu11.2
   - name: libc6-dev
@@ -53,7 +53,7 @@ DEBS_TARBALL:
   - name: libpython3.5-stdlib
     version: 3.5.2-2ubuntu0~16.04.12
   - name: linux-libc-dev
-    version: 4.4.0-194.226
+    version: 4.4.0-201.233
   - name: lsb-release
     version: 9.20160110ubuntu0.2
   - name: mime-support
@@ -61,7 +61,7 @@ DEBS_TARBALL:
   - name: python
     version: 2.7.12-1~16.04
   - name: python-apt-common
-    version: 1.1.0~beta1ubuntu0.16.04.9
+    version: 1.1.0~beta1ubuntu0.16.04.11
   - name: python-dev
     version: 2.7.12-1~16.04
   - name: python-minimal
@@ -79,7 +79,7 @@ DEBS_TARBALL:
   - name: python3
     version: 3.5.1-3
   - name: python3-apt
-    version: 1.1.0~beta1ubuntu0.16.04.9
+    version: 1.1.0~beta1ubuntu0.16.04.11
   - name: python3-dbus
     version: 1.2.0-3
   - name: python3-dev
