@@ -7,7 +7,9 @@ DEBS_TARBALL:
   - name: binutils-x86-64-linux-gnu
     version: 2.30-21ubuntu1~18.04.4
   - name: ca-certificates
-    version: 20201027ubuntu0.18.04.1
+    version: 20210119~18.04.1
+  - name: curl
+    version: 7.58.0-2ubuntu3.12
   - name: ed
     version: 1.10-2.1
   - name: file
@@ -23,7 +25,9 @@ DEBS_TARBALL:
   - name: libbsd0
     version: 0.8.7-1ubuntu0.1
   - name: libcurl3-gnutls
-    version: 7.58.0-2ubuntu3.10
+    version: 7.58.0-2ubuntu3.12
+  - name: libcurl4
+    version: 7.58.0-2ubuntu3.12
   - name: libedit2
     version: 3.1-20170329-1
   - name: liberror-perl
@@ -41,11 +45,11 @@ DEBS_TARBALL:
   - name: libperl5.26
     version: 5.26.1-6ubuntu0.5
   - name: libssl1.0.0
-    version: 1.0.2n-1ubuntu5.4
+    version: 1.0.2n-1ubuntu5.5
   - name: locales
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: locales-all
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: netcat
     version: 1.10-41.1
   - name: netcat-traditional
@@ -56,12 +60,10 @@ DEBS_TARBALL:
     version: 2.7.6-2ubuntu1.1
   - name: perl
     version: 5.26.1-6ubuntu0.5
-  - name: perl-base
-    version: 5.26.1-6ubuntu0.5
   - name: perl-modules-5.26
     version: 5.26.1-6ubuntu0.5
   - name: unzip
-    version: 6.0-21ubuntu1
+    version: 6.0-21ubuntu1.1
   - name: wget
     version: 1.19.4-1ubuntu2.2
   - name: zip
