@@ -59,11 +59,11 @@ DEBS_TARBALL:
   - name: libxtst6
     version: 2:1.2.3-1
   - name: multiarch-support
-    version: 2.27-3ubuntu1.3
+    version: 2.27-3ubuntu1.4
   - name: openjdk-8-jdk-headless
-    version: 8u275-b01-0ubuntu1~18.04
+    version: 8u282-b08-0ubuntu1~18.04
   - name: openjdk-8-jre-headless
-    version: 8u275-b01-0ubuntu1~18.04
+    version: 8u282-b08-0ubuntu1~18.04
   - name: ucf
     version: "3.0038"
   - name: x11-common
